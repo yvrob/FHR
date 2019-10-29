@@ -1,0 +1,31 @@
+
+include coreMaterials
+include fuel
+%include detectors
+
+set acelib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata"% "/global/scratch/co_nuclear/sss_photon_data/photon.xsdata"
+
+
+pbed u_pb u_flibe "fpb_pos"
+
+
+cell 215 0 fill u_pb  -688
+
+%---Outside
+%cell 267 0 outside 688
+
+surf 700 inf
+cell c_flibe u_flibe Flibe924 -700
+
+%---Outside
+
+set pop 100000 200 30 
+
+set bc 1
+set ures 1
+set power 2.36E8
+
+%set opti 1
+
+ene E 4 "scale44"
+det flux de E dx -15 15 20 dy -15 15 20 dz 0 40 20
