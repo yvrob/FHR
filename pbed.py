@@ -44,7 +44,7 @@ qual=5000
 
 rad_core=20
 zmin=0
-zmax=50
+zmax=40
 refl_factor=0.1
 
 enrich=19.9e-2

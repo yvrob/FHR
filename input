@@ -25,7 +25,11 @@ set bc 1
 set ures 1
 set power 2.36E8
 
-set opti 1
+%set opti 1
 
-%ene E 4 "scale44"
-%det flux de E dx -15 15 50 dy -15 15 50 dz 0 40 50
+ene E 4 "scale44"
+det flux5 de E dx -20 20 5 dy -20 5 dz 0 50 5 
+det flux10 de E dx -20 20 10 dy -20 10 dz 0 40 10  
+det flux25 de E dx -20 20 25 dy -20 25 dz 0 40 25  
+det flux50 de E dx -20 20 50 dy -20 50 dz 0 40 50
+det flux100 de E dx -20 20 100 dy -20 100 dz 0 40 100  
