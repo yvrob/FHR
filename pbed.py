@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 
 from linspecer import *
 
-from multiprocessing import Pool
-
 def create_FCC(a,x0,y0,z0):
     FCC=np.array([
     [x0+a,y0+a,z0+a],
@@ -47,7 +45,7 @@ zmin=0
 zmax=40
 refl_factor=0.1
 
-enrich=19.9e-2
+enrich=99.99e-2
 
 if rad_core%(2*a)!=0:
     rad_core_corrected=(rad_core//(2*a)+1)*2*a
@@ -148,7 +146,7 @@ surf 690 pz {}
 surf 689 pz {}
 
 %%---surf for triso inside fuel pebbles
-surf central_graphite sph 0.000000 0.000000 0.000000 1.251140
+surf central_graphite sph 0.000000 0.000000 0.000000 0.1
 surf graphite_mat sph 0.000000 0.000000 0.000000 1.400000
 
 '''.format(rad_core,zmin,zmax,zmin,zmax)
@@ -172,14 +170,14 @@ for i in range(len(pbed)):
 mat fuel_{} -10.5 tmp 1073
 92235.09c {}
 92238.09c {}
-12000.09c 50.0
-8016.09c 100.0
+%12000.09c 50.0
+%8016.09c 100.0
 '''.format(i+1,i+1,enrich*100,100-enrich*100)
 
     string+='''
 %---Triso particle 
 particle p{}
-fuel_{} 0.0385
+fuel_{} 0.0389
 Buffer1074 0.0390
 iPyC1074 0.0395
 SiC1074 0.0400

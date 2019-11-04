@@ -32,4 +32,4 @@
 
 # run command
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-/global/software/sl-7.x86_64/modules/gcc/6.3.0/openmpi/2.0.2-gcc/bin/mpirun -np 4 /global/home/users/yvesrobert/Softwares/serpent2.1.30/serpent2.1.30_gcc/sss2 -omp 20 input
+mpirun -np 4 --map-by ppr:1:node:pe=20 /global/home/users/yvesrobert/Softwares/serpent2.1.30/serpent2.1.30_gcc/sss2 -omp 20 input

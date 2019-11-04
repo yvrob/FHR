@@ -19,7 +19,7 @@ cell c_flibe u_flibe Flibe924 -700
 
 %---Outside
 
-set pop 100000 200 30 
+set pop 50000 2000 500 
 
 set bc 1
 set ures 1
@@ -27,9 +27,29 @@ set power 2.36E8
 
 %set opti 1
 
-ene E 4 "scale44"
-det flux5 de E dx -20 20 5 dy -20 5 dz 0 50 5 
-det flux10 de E dx -20 20 10 dy -20 10 dz 0 40 10  
-det flux25 de E dx -20 20 25 dy -20 25 dz 0 40 25  
-det flux50 de E dx -20 20 50 dy -20 50 dz 0 40 50
-det flux100 de E dx -20 20 100 dy -20 100 dz 0 40 100  
+%ene E 4 "scale44"
+det flux3 dx -20 20 3 dy -20 20 3 dz 0 40 3
+det flux4 dx -20 20 4 dy -20 20 4 dz 0 40 4
+det flux5 dx -20 20 5 dy -20 20 5 dz 0 40 5 
+det flux6 dx -20 20 6 dy -20 20 6 dz 0 40 6
+det flux8 dx -20 20 8 dy -20 20 8 dz 0 40 8
+det flux10 dx -20 20 10 dy -20 20 10 dz 0 40 10
+det flux11 dx -20 20 11 dy -20 20 11 dz 0 40 11
+det flux12 dx -20 20 12 dy -20 20 12 dz 0 40 12
+det flux13 dx -20 20 13 dy -20 20 13 dz 0 40 13
+det flux14 dx -20 20 14 dy -20 20 14 dz 0 40 14
+det flux15 dx -20 20 15 dy -20 20 15 dz 0 40 15
+det flux16 dx -20 20 16 dy -20 20 16 dz 0 40 16
+det flux18 dx -20 20 18 dy -20 20 18 dz 0 40 18  
+det flux20 dx -20 20 20 dy -20 20 20 dz 0 40 20
+%det flux25 dx -20 20 25 dy -20 20 25 dz 0 40 25
+%det flux30 dx -20 20 30 dy -20 20 30 dz 0 40 30  
+%det flux35 dx -20 20 35 dy -20 20 35 dz 0 40 35
+%det flux40 dx -20 20 40 dy -20 20 40 dz 0 40 40
+%det flux50 dx -20 20 50 dy -20 20 50 dz 0 40 50
+%det flux60 dx -20 20 60 dy -20 20 60 dz 0 40 60
+%det flux70 dx -20 20 70 dy -20 20 70 dz 0 40 70
+%det flux85 dx -20 20 85 dy -20 20 85 dz 0 40 85
+%det flux100 dx -20 20 100 dy -20 20 100 dz 0 40 100
+%det flux50 de E dx -20 20 50 dy -20 20 50 dz 0 40 50
+%det flux100 dx -20 20 100 dy -20 20 100 dz 0 40 100  
