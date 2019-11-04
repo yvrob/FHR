@@ -19,12 +19,6 @@ mat Shell1074 -1.75 moder grph_Shell1074 6000 tmp 1073 rgb 255 75 134
  6000.09c 1.0
  therm grph_Shell1074 gre7.22t
 
-mat fuel1pbw0 -10.5 tmp 1073 rgb 255 75 134
- 92235.09c 19.9
- 92238.09c 80.1
- 12000.09c 150.0
- 8016.09c 100.0
-
 mat Buffer1074 -1.05 moder grph_Buffer1074 6000 tmp 1073
  %Buffer layer in triso particle
  6000.09c 5.26449E-02
@@ -58,29 +52,6 @@ mat Flibe874 -1.987 tmp 873 rgb 0 181 238
  4009.06c 1.00000e+00
  9019.06c 4.00000e+00
 
-mat fuel1pba10 -10.5 tmp 1073 rgb 255 75 134
- 92235.09c 19.9
- 92238.09c 80.1
- 12000.09c 150.0
- 8016.09c 100.0
-
-mat fuel1pba30 -10.5 tmp 1073 rgb 255 75 134
- 92235.09c 19.9
- 92238.09c 80.1
- 12000.09c 150.0
- 8016.09c 100.0
-
-mat fuel1pba20 -10.5 tmp 1073 rgb 255 75 134
- 92235.09c 19.9
- 92238.09c 80.1
- 12000.09c 150.0
- 8016.09c 100.0
-
-mat fuel1pba40 -10.5 tmp 1073 rgb 255 75 134
- 92235.09c 19.9
- 92238.09c 80.1
- 12000.09c 150.0
- 8016.09c 100.0
 
 mat BGraphite874 -1.74 moder grph_BGraphite874 6000 tmp 873 rgb 141 155 178
  6000.06c 8.77414e-02

@@ -167,7 +167,7 @@ string='''
 plot 1 {} {}
 plot 3 {} {} {}
 
-'''.format(int(qual*(delta_x/delta_z)),qual,qual,qual, (zmin_corrected+zmax_corrected)/2)
+'''.format(int(qual*(delta_x/delta_z)),qual,qual,qual, (zmin+zmax)/2)
 geometry_file.write(string)
 
 # Surfaces to create core, triso particles and pebbles geometry
@@ -185,8 +185,6 @@ surf graphite_mat sph 0 0 0 {} % graphite matrix maximum radius
 '''.format(rad_core,zmin,zmax,zmin,zmax,pebble_rad[0],pebble_rad[1])
 geometry_file.write(string)
 
-#surf lower_refl pz {} % lower elevation reflector plane
-#surf upper_refl pz {} % higher elevation reflector plane
 string='''
 %%---graphite reflector
 surf cyl_in cyl 0.0 0.0 {} {} {} % inner reflector surface 
@@ -199,7 +197,7 @@ cell refl_cylinder 0 Graphite924 cyl_in -cyl_out
 
 %cell out1 0 outside lower_refl -upper_refl
 cell out2 0 outside cyl_out
-'''.format(rad_core,zmin,zmax, rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness) #,zmin-refl_thickness,zmax+refl_thickness)
+'''.format(rad_core,zmin,zmax, rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness)
 geometry_file.write(string)
 
 # Create pebble ped and flibe universes
@@ -256,19 +254,28 @@ cell c{}_3 {} Shell1074 graphite_mat
 
 fuel_file.close()
 
+
 # %% Write detector file with energy structure and detectors
 
 det_file=open(path+'detectors','w')
-string='''
-ene E 4 "{}"
-
-'''.format(energy_structure)
-det_file.write(string)
+#string='''
+#ene E 4 "{}"
+#
+#'''.format(energy_structure)
+#det_file.write(string)
 #det_file.write('det flux dl u_pb\n')
 #det_file.write('det flux_spectrum dl u_pb de E\n')
 
 #for i in range(len(pbed)):
 #    det_file.write('det flux_{} de E du {}\n'.format(i+1,i+1))
+
+Nr=1
+size_bin_max=max(delta_x/Nr,delta_z/(int(Nr*delta_z/delta_x)))
+while size_bin_max>pebble_rad[-1]:
+    string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {}\n'.format(Nr,-rad_core,rad_core,Nr,-rad_core,rad_core,Nr,zmin,zmax,int(Nr*delta_z/delta_x))
+    det_file.write(string)
+    Nr+=1
+    size_bin_max=max(delta_x/Nr,delta_z/(int(Nr*delta_z/delta_x)))
 
 det_file.close()
 
