@@ -26,29 +26,30 @@ def create_FCC(a,x0,y0,z0):
     [x0,y0,z0-a]
     ])
     return FCC+[0,0,a]
-path='./'
 
 # %% Input data
+
+path='./'
 
 # Pebble lattice information
 triso_radii = [0.0389,0.0390,0.0395,0.0400,0.0405] # List of radii for the triso particles (cm) [fuel, buffer, inner PyC, SiC, outer PyC]
 triso_a=0.08860629 # Triso FCC cell side length (cm)
 
-pebble_rad=[0.01, 0.99, 1]#[0.5, 1.1,1.5] # List of radii for the pebbles (cm) [innner graphite, graphite matrix, external radius]
-pebble_a=1.5#2.275414 # Pebble FCC cell side length (cm)
+pebble_rad=[0.01, 0.99, 1] #[0.5, 1.1,1.5] # List of radii for the pebbles (cm) [innner graphite, graphite matrix, external radius]
+pebble_a=1.5 #2.275414 # Pebble FCC cell side length (cm)
 enrich=99.99e-2 # U235 atomic enrichment in pebbles (fraction)
 
 # Core 
-rad_core=15#20 # Core radius (cm)
+rad_core=20 # Core radius (cm)
 zmin=0 # Minimum elevation of the core (cm)
-zmax=20#40 # Maximum elevation of the core (cm)
+zmax=40 # Maximum elevation of the core (cm)
 refl_thickness=0.2*rad_core # Thickness of the graphite external reflector (cm)
 
 # Simulation
 energy_structure='scale44'
 qual = 5000 # Quality of the plots (px)
-acelib = '' # Path to acelib
-ures = 0#1
+acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to acelib
+ures = 1
 power = 2.36e8
 N_particles=5000
 N_active=2000
@@ -282,7 +283,7 @@ include geometry
 '''
 input_file.write(string)
 if acelib!='':
-    input_file.write('set acelib {}\n'.format(acelib))
+    input_file.write('set acelib "{}"\n'.format(acelib))
 
 input_file.write('set ures {}\n'.format(ures))  
 input_file.write('set power {}\n'.format(power))  
