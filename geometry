@@ -11,13 +11,13 @@ surf lower_plane pz 0 % lower elevation plane
 surf upper_plane pz 40 % higher elevation plane
 
 %%---surf for triso inside fuel pebbles (spheres)
-surf central_graphite sph 0 0 0 0.01 % internal graphite
-surf graphite_mat sph 0 0 0 0.99 % graphite matrix maximum radius
+surf central_graphite sph 0 0 0 0.5 % internal graphite
+surf graphite_mat sph 0 0 0 0.8 % graphite matrix maximum radius
 
 
 %%---graphite reflector
 surf cyl_in cyl 0.0 0.0 20 0 40 % inner reflector surface 
-surf cyl_out cyl 0.0 0.0 24.0 -4.0 44.0 % outer reflector surface
+surf cyl_out cyl 0.0 0.0 28.0 -8.0 48.0 % outer reflector surface
 
 
 cell refl_cylinder 0 Graphite924 cyl_in -cyl_out
