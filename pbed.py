@@ -35,7 +35,7 @@ path='./'
 triso_radii = [0.0385,0.0390,0.0395,0.0400,0.0405] # List of radii for the triso particles (cm) [fuel, buffer, inner PyC, SiC, outer PyC]
 triso_a=0.08860629 # Triso FCC cell side length (cm)
 
-pebble_rad=[0.5, 0.8, 1] #[0.5, 1.1,1.5] # List of radii for the pebbles (cm) [innner graphite, graphite matrix, external radius]
+pebble_rad=[0.15, 0.8, 1] #[0.5, 1.1,1.5] # List of radii for the pebbles (cm) [innner graphite, graphite matrix, external radius]
 pebble_a=1.5 #2.275414 # Pebble FCC cell side length (cm)
 enrich=99.99e-2 # U235 atomic enrichment in pebbles (fraction)
 
