@@ -1,0 +1,33 @@
+
+%%---plotting geometry
+plot 1 1428 1000
+plot 3 1000 1000 10.5
+
+
+%%---surf for core
+surf infinite inf
+surf core_cyl cylz 0 0 15 0 20 % infinite cylinder 
+surf lower_plane pz 0 % lower elevation plane
+surf upper_plane pz 20 % higher elevation plane
+
+%%---surf for triso inside fuel pebbles (spheres)
+surf central_graphite sph 0 0 0 0.01 % internal graphite
+surf graphite_mat sph 0 0 0 0.99 % graphite matrix maximum radius
+
+
+%%---graphite reflector
+surf cyl_in cyl 0.0 0.0 15 0 20 % inner reflector surface 
+surf cyl_out cyl 0.0 0.0 18.0 -3.0 23.0 % outer reflector surface
+
+
+cell refl_cylinder 0 Graphite924 cyl_in -cyl_out
+%cell lower_refl 0 Graphite924 lower_refl -lower_plane
+%cell upper_refl 0 Graphite924 upper_plane -upper_refl 
+
+%cell out1 0 outside lower_refl -upper_refl
+cell out2 0 outside cyl_out
+
+pbed u_pb u_flibe "fpb_pos" 
+cell c_pb 0 fill u_pb  -core_cyl -upper_plane lower_plane
+cell c_flibe u_flibe Flibe924 -infinite
+
