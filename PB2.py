@@ -14,23 +14,23 @@ fuel_mass_dens=10.5
 rad_core=105 # Core radius (cm)
 zmin=180.5 # Minimum elevation of the core (cm)
 zmax=430.5 # Maximum elevation of the core (cm)
-multiplier=4.5
+multiplier=4 # Just to keep the proportions with the model
 pebble_rad=[1.251140*multiplier, 1.4*multiplier,1.5*multiplier] # List of radii for the pebbles (cm) [innner graphite, graphite matrix, external radius]
 pebble_a=2.275414*2*multiplier # Pebble FCC cell side length (cm)
 
 
 # Core 
-migration_length_C=60
-refl_thickness=migration_length_C/2 # Thickness of the graphite external reflector (cm) 
+refl_thickness=0 # migration_length_C/20 # Thickness of the graphite external reflector (cm) 
 
 # Simulation
+plot=True
 energy_structure='scale44'
-qual = 10000 # Quality of the plots (px)
+qual = 15000 # Quality of the plots (px)
 acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to acelib
-opti=1
+opti=4
 ures = 1
 power = 2.36e8
-n_particles=50000
+n_particles=10000
 n_active=2000
 n_inactive=500
 
@@ -156,27 +156,29 @@ print('Number of pebbles in the core: {}'.format(n_pebbles))
 # %% Write geometry file
             
 geometry_file=open(path+'geometry','w')
-
-# Plot geometry
-#for i in range(50):
-#    string='''
-#%%---plotting geometry
-#plot 3 {} {} {}
-#
-#'''.format(qual,qual, (i+1)*(zmin_corrected+zmax_corrected)/1000)
-#    geometry_file.write(string)
-
-string='''
-%%---plotting geometry
-plot 1 {} {}
-plot 3 {} {} {}
-
-'''.format(int(qual*(delta_x/delta_z)),qual,qual,qual, (zmin+zmax)/2)
-geometry_file.write(string)
-
-#%surf lower_plane pz {} % lower elevation plane
-#%surf upper_plane pz {} % higher elevation plane
-
+if plot==True:
+    # Plot geometry
+    #for i in range(50):
+    #    string='''
+    #%%---plotting geometry
+    #plot 3 {} {} {}
+    #
+    #'''.format(qual,qual, (i+1)*(zmin_corrected+zmax_corrected)/1000)
+    #    geometry_file.write(string)
+    
+    string='''
+    %%---plotting geometry
+    plot 1 {} {}
+    plot 3 {} {} {}
+    
+    '''.format(int(qual*(delta_x/delta_z)),qual,qual,qual, (zmin+zmax)/2)
+    geometry_file.write(string)
+    
+    #%surf lower_plane pz {} % lower elevation plane
+    #%surf upper_plane pz {} % higher elevation plane
+else:
+    string=''
+    
 # Surfaces to create core, triso particles and pebbles geometry
 string='''
 %%---surf for core
@@ -190,16 +192,19 @@ surf graphite_mat sph 0 0 0 {} % graphite matrix maximum radius
 '''.format(rad_core,zmin,zmax,pebble_rad[0],pebble_rad[1]) #.format(rad_core,zmin,zmax,zmin,zmax,pebble_rad[0],pebble_rad[1])
 geometry_file.write(string)
 
-string='''
-%%---graphite reflector
-surf cyl_in cyl 0.0 0.0 {} {} {} % inner reflector surface 
-surf cyl_out cyl 0.0 0.0 {} {} {} % outer reflector surface
-
-
-cell refl_cylinder 0 Graphite924 cyl_in -cyl_out
-cell out2 0 outside cyl_out
-'''.format(rad_core,zmin,zmax, rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness)
-geometry_file.write(string)
+if refl_thickness!=0:
+    string='''
+    %%---graphite reflector
+    surf cyl_out cyl 0.0 0.0 {} {} {} % outer reflector surface
+    cell refl_cylinder 0 Graphite924 core_cyl -cyl_out
+    cell out2 0 outside cyl_out
+    '''.format(rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness)
+    geometry_file.write(string)
+else:
+    string='''
+    cell out2 0 outside core_cyl
+    '''.format(rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness)
+    geometry_file.write(string)
 
 # Create pebble ped and flibe universes
 string='''
