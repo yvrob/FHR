@@ -25,7 +25,7 @@ def create_FCC(a,x0,y0,z0):
     [x0,y0,z0+a],
     [x0,y0,z0-a]
     ])
-    return FCC+[0,0,a]
+    return FCC #+[0,0,a]
 
 # %% Input data
 
@@ -51,7 +51,7 @@ qual = 5000 # Quality of the plots (px)
 acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to acelib
 ures = 1
 power = 2.36e8
-N_particles=5000
+N_particles=10000
 N_active=2000
 N_inactive=500
 
