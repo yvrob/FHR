@@ -40,10 +40,10 @@ pebble_a=1.5 #2.275414 # Pebble FCC cell side length (cm)
 enrich=99.99e-2 # U235 atomic enrichment in pebbles (fraction)
 
 # Core 
-rad_core=20 # Core radius (cm)
+rad_core=15 # Core radius (cm)
 zmin=0 # Minimum elevation of the core (cm)
 zmax=40 # Maximum elevation of the core (cm)
-refl_thickness=0.4*rad_core # Thickness of the graphite external reflector (cm)
+refl_thickness=0.05*rad_core # Thickness of the graphite external reflector (cm)
 
 # Simulation
 energy_structure='scale44'
