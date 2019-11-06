@@ -16,3 +16,13 @@ det flux_30 dx -105 105 30 dy -105 105 30 dz 180.5 430.5 34
 det flux_32 dx -105 105 32 dy -105 105 32 dz 180.5 430.5 37
 det flux_34 dx -105 105 34 dy -105 105 34 dz 180.5 430.5 39
 det flux_36 dx -105 105 36 dy -105 105 36 dz 180.5 430.5 41
+det sample_215 du 215
+det sample_1198 du 1198
+det sample_1726 du 1726
+det sample_2013 du 2013
+det sample_3068 du 3068
+det sample_4855 du 4855
+det sample_7927 du 7927
+det sample_8162 du 8162
+det sample_8418 du 8418
+det sample_9021 du 9021

@@ -34,12 +34,15 @@ n_particles=10000
 n_active=2000
 n_inactive=500
 
+# Detectors
+n_samp=10
+
 # %% Modules
 
 from time import time
 import numpy as np
 import math
-
+import random
 
 import re
 from mpl_toolkits.mplot3d import Axes3D
@@ -272,6 +275,20 @@ while size_bin_max>pebble_rad[-1]:
     Nr+=2
     size_bin_max=max(delta_x/Nr,delta_z/(int(Nr*delta_z/delta_x)))
 
+if n_samp!=0:
+    sampling_list=random.sample(range(n_pebbles), n_samp)
+    with open(path+"fpb_pos", 'r') as istr:
+        index=0
+        for line in istr:
+            if index in sampling_list:
+                values_line=re.findall("[-+]?[.]?[\d]+(?:,\d\d\d)*[\.]?\d*(?:[eE][-+]?\d+)?",line)
+                string='det sample_{} du {}\n'.format(index,index)
+                sampling_list.remove(index)
+                det_file.write(string)
+            if len(sampling_list)==0:
+                break
+
+            index+=1
 det_file.close()
 
 # %% Write input file with simulation options
@@ -309,4 +326,5 @@ with open(path+'fpb_pos') as file_:
         X.append(float(values_line[0]))
         Y.append(float(values_line[1]))
         Z.append(float(values_line[2]))
-ax.scatter3D(X,Y,Z)
+ax.scatter3D(X,Y,Z,c='red')
+ax.set_facecolor((0.1,0.1,0.1))
