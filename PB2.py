@@ -270,9 +270,9 @@ det_file=open(path+'detectors','w')
 Nr=2
 size_bin_max=max(delta_x/Nr,delta_z/(int(Nr*delta_z/delta_x)))
 while size_bin_max>pebble_rad[-1]:
-    string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {}\n'.format(Nr,-rad_core,rad_core,Nr,-rad_core,rad_core,Nr,zmin,zmax,int(Nr*delta_z/delta_x))
+    string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {}\n'.format(Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,zmin-pebble_rad[-1],zmax+pebble_rad[-1],int(Nr*delta_z/delta_x))
     det_file.write(string)
-    Nr+=2
+    Nr+=5
     size_bin_max=max(delta_x/Nr,delta_z/(int(Nr*delta_z/delta_x)))
 
 if n_samp!=0:

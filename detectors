@@ -1,28 +1,17 @@
-det flux_2 dx -105 105 2 dy -105 105 2 dz 180.5 430.5 2
-det flux_4 dx -105 105 4 dy -105 105 4 dz 180.5 430.5 4
-det flux_6 dx -105 105 6 dy -105 105 6 dz 180.5 430.5 6
-det flux_8 dx -105 105 8 dy -105 105 8 dz 180.5 430.5 9
-det flux_10 dx -105 105 10 dy -105 105 10 dz 180.5 430.5 11
-det flux_12 dx -105 105 12 dy -105 105 12 dz 180.5 430.5 13
-det flux_14 dx -105 105 14 dy -105 105 14 dz 180.5 430.5 16
-det flux_16 dx -105 105 16 dy -105 105 16 dz 180.5 430.5 18
-det flux_18 dx -105 105 18 dy -105 105 18 dz 180.5 430.5 20
-det flux_20 dx -105 105 20 dy -105 105 20 dz 180.5 430.5 23
-det flux_22 dx -105 105 22 dy -105 105 22 dz 180.5 430.5 25
-det flux_24 dx -105 105 24 dy -105 105 24 dz 180.5 430.5 27
-det flux_26 dx -105 105 26 dy -105 105 26 dz 180.5 430.5 30
-det flux_28 dx -105 105 28 dy -105 105 28 dz 180.5 430.5 32
-det flux_30 dx -105 105 30 dy -105 105 30 dz 180.5 430.5 34
-det flux_32 dx -105 105 32 dy -105 105 32 dz 180.5 430.5 37
-det flux_34 dx -105 105 34 dy -105 105 34 dz 180.5 430.5 39
-det flux_36 dx -105 105 36 dy -105 105 36 dz 180.5 430.5 41
-det sample_215 du 215
-det sample_1198 du 1198
-det sample_1726 du 1726
-det sample_2013 du 2013
-det sample_3068 du 3068
-det sample_4855 du 4855
-det sample_7927 du 7927
-det sample_8162 du 8162
-det sample_8418 du 8418
-det sample_9021 du 9021
+det flux_2 dx -111.0 111.0 2 dy -111.0 111.0 2 dz 174.5 436.5 2
+det flux_7 dx -111.0 111.0 7 dy -111.0 111.0 7 dz 174.5 436.5 8
+det flux_12 dx -111.0 111.0 12 dy -111.0 111.0 12 dz 174.5 436.5 13
+det flux_17 dx -111.0 111.0 17 dy -111.0 111.0 17 dz 174.5 436.5 19
+det flux_22 dx -111.0 111.0 22 dy -111.0 111.0 22 dz 174.5 436.5 25
+det flux_27 dx -111.0 111.0 27 dy -111.0 111.0 27 dz 174.5 436.5 31
+det flux_32 dx -111.0 111.0 32 dy -111.0 111.0 32 dz 174.5 436.5 37
+det sample_681 du 681
+det sample_1568 du 1568
+det sample_1610 du 1610
+det sample_2508 du 2508
+det sample_2642 du 2642
+det sample_2842 du 2842
+det sample_4599 du 4599
+det sample_5340 du 5340
+det sample_8310 du 8310
+det sample_8992 du 8992
