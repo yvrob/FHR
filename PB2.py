@@ -7,35 +7,36 @@ path='./'
 triso_radii = [0.02,0.03,0.0335,0.0370,0.0405] # List of radii for the triso particles (cm) [fuel, buffer, inner PyC, SiC, outer PyC]
 triso_a=0.08860629 # Triso FCC cell side length (cm)
 fuel_enrich=20e-2 # U235 atomic enrichment in triso particles (fraction)
-fuel_temp=1073
-fuel_mass_dens=10.5
+fuel_temp=1073 # fuel temperature (K)
+fuel_mass_dens=10.5 # fuel mass density (g/cm^3 = t/m^3)
 
 # Pebble lattice information
-rad_core=105 # Core radius (cm)
-zmin=180.5 # Minimum elevation of the core (cm)
-zmax=430.5 # Maximum elevation of the core (cm)
 multiplier=4 # Just to keep the proportions with the model
 pebble_rad=[1.251140*multiplier, 1.4*multiplier,1.5*multiplier] # List of radii for the pebbles (cm) [innner graphite, graphite matrix, external radius]
 pebble_a=2.275414*2*multiplier # Pebble FCC cell side length (cm)
 
 
 # Core 
+rad_core=105 # Core radius (cm)
+zmin=180.5 # Minimum elevation of the core (cm)
+zmax=430.5 # Maximum elevation of the core (cm)
 refl_thickness=0 # migration_length_C/20 # Thickness of the graphite external reflector (cm) 
+power = 2.36e8 # Total power (W)
 
 # Simulation
-plot=True
-energy_structure='scale44'
-qual = 5000 # Quality of the plots (px)
-acelib = ''#/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to acelib
-opti=1
-ures = 1
-power = 2.36e8
-n_particles=10000
-n_active=2000
-n_inactive=500
+plot=True # Boolean to plot or not the geometry
+qual = 10000 # Quality of the plots (px)
+
+acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to cross sections library
+opti=4 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
+ures = 1 # Unresolved resonance probability table sampling
+n_particles=10000 # Number of particles per cycle
+n_active=10000 # Number of inactive cycles
+n_inactive=1000 # Number of active cycles
 
 # Detectors
-n_samp=5
+energy_structure='scale44' # Name of predefined energy structure to use for detectors
+n_samp=20 # Number of sampled pebbles to see if it the grid is converged
 
 # %% Modules
 
@@ -116,10 +117,16 @@ while z<=max_Z:
         x=min_X
         while x<=max_X:
             origin=np.array([x,y,z])
-            to_add=FCC+origin # Shift the origin of the FCC to match the center
+            to_add=np.round(FCC+origin,6) # Shift the origin of the FCC to match the center
             for i in range(len(to_add)):
                 if to_add[i][0]**2+to_add[i][1]**2<=(rad_core+pebble_rad[-1])**2 and to_add[i][2]>=zmin and to_add[i][2]<=zmax:
-                    file.write('{}\t{}\t{}\t{}\n'.format(to_add[i][0],to_add[i][1],to_add[i][2],pebble_rad[-1]))
+                    for j in range(len(to_add[i])):
+                        if to_add[i][j]==-0:
+                            file.write('{0:.6f}\t'.format(to_add[i][j]+0))
+                        else:
+                            file.write('{0:.6f}\t'.format(to_add[i][j]))
+                            
+                    file.write('{}\n'.format(pebble_rad[-1]))                                   
             x+=pebble_a
         y+=pebble_a
     z+=pebble_a 
@@ -334,3 +341,4 @@ with open(path+'fpb_pos') as file_:
         Z.append(float(values_line[2]))
 ax.scatter3D(X,Y,Z,c='red')
 ax.set_facecolor((0.1,0.1,0.1))
+

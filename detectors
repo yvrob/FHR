@@ -4,8 +4,23 @@ det flux_8 dx -111.0 111.0 8 dy -111.0 111.0 8 dz 174.5 436.5 9
 det flux_11 dx -111.0 111.0 11 dy -111.0 111.0 11 dz 174.5 436.5 12
 det flux_14 dx -111.0 111.0 14 dy -111.0 111.0 14 dz 174.5 436.5 16
 det flux_17 dx -111.0 111.0 17 dy -111.0 111.0 17 dz 174.5 436.5 19
-det sample_155 du 155
-det sample_1970 du 1970
-det sample_4304 du 4304
-det sample_5382 du 5382
-det sample_8807 du 8807
+det sample_179 du 179
+det sample_720 du 720
+det sample_993 du 993
+det sample_1362 du 1362
+det sample_1510 du 1510
+det sample_1915 du 1915
+det sample_1976 du 1976
+det sample_2119 du 2119
+det sample_2241 du 2241
+det sample_2390 du 2390
+det sample_2514 du 2514
+det sample_3059 du 3059
+det sample_3311 du 3311
+det sample_3463 du 3463
+det sample_3708 du 3708
+det sample_3936 du 3936
+det sample_4431 du 4431
+det sample_4573 du 4573
+det sample_4723 du 4723
+det sample_6202 du 6202
