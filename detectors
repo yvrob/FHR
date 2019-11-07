@@ -1,17 +1,11 @@
 det flux_2 dx -111.0 111.0 2 dy -111.0 111.0 2 dz 174.5 436.5 2
-det flux_7 dx -111.0 111.0 7 dy -111.0 111.0 7 dz 174.5 436.5 8
-det flux_12 dx -111.0 111.0 12 dy -111.0 111.0 12 dz 174.5 436.5 13
+det flux_5 dx -111.0 111.0 5 dy -111.0 111.0 5 dz 174.5 436.5 5
+det flux_8 dx -111.0 111.0 8 dy -111.0 111.0 8 dz 174.5 436.5 9
+det flux_11 dx -111.0 111.0 11 dy -111.0 111.0 11 dz 174.5 436.5 12
+det flux_14 dx -111.0 111.0 14 dy -111.0 111.0 14 dz 174.5 436.5 16
 det flux_17 dx -111.0 111.0 17 dy -111.0 111.0 17 dz 174.5 436.5 19
-det flux_22 dx -111.0 111.0 22 dy -111.0 111.0 22 dz 174.5 436.5 25
-det flux_27 dx -111.0 111.0 27 dy -111.0 111.0 27 dz 174.5 436.5 31
-det flux_32 dx -111.0 111.0 32 dy -111.0 111.0 32 dz 174.5 436.5 37
-det sample_681 du 681
-det sample_1568 du 1568
-det sample_1610 du 1610
-det sample_2508 du 2508
-det sample_2642 du 2642
-det sample_2842 du 2842
-det sample_4599 du 4599
-det sample_5340 du 5340
-det sample_8310 du 8310
-det sample_8992 du 8992
+det sample_155 du 155
+det sample_1970 du 1970
+det sample_4304 du 4304
+det sample_5382 du 5382
+det sample_8807 du 8807

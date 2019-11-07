@@ -25,9 +25,9 @@ refl_thickness=0 # migration_length_C/20 # Thickness of the graphite external re
 # Simulation
 plot=True
 energy_structure='scale44'
-qual = 15000 # Quality of the plots (px)
-acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to acelib
-opti=4
+qual = 5000 # Quality of the plots (px)
+acelib = ''#/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to acelib
+opti=1
 ures = 1
 power = 2.36e8
 n_particles=10000
@@ -35,7 +35,7 @@ n_active=2000
 n_inactive=500
 
 # Detectors
-n_samp=10
+n_samp=5
 
 # %% Modules
 
@@ -268,12 +268,18 @@ det_file=open(path+'detectors','w')
 #    det_file.write('det flux_{} de E du {}\n'.format(i+1,i+1))
 
 Nr=2
-size_bin_max=max(delta_x/Nr,delta_z/(int(Nr*delta_z/delta_x)))
+size_bins_R=delta_x/(2*Nr)
+size_bins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
+size_bin_max=max(size_bins_R,size_bins_Z)
 while size_bin_max>pebble_rad[-1]:
+    Nbins_R=delta_x/(2*Nr)
+    Nbins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
     string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {}\n'.format(Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,zmin-pebble_rad[-1],zmax+pebble_rad[-1],int(Nr*delta_z/delta_x))
     det_file.write(string)
-    Nr+=5
-    size_bin_max=max(delta_x/Nr,delta_z/(int(Nr*delta_z/delta_x)))
+    Nr+=3
+    size_bins_R=delta_x/(2*Nr)
+    size_bins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
+    size_bin_max=max(size_bins_R,size_bins_Z)
 
 if n_samp!=0:
     sampling_list=random.sample(range(n_pebbles), n_samp)
