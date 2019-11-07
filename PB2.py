@@ -24,19 +24,19 @@ refl_thickness=0 # migration_length_C/20 # Thickness of the graphite external re
 power = 2.36e8 # Total power (W)
 
 # Simulation
-plot=True # Boolean to plot or not the geometry
+plot=False # Boolean to plot or not the geometry
 qual = 10000 # Quality of the plots (px)
 
 acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to cross sections library
 opti=4 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
 ures = 1 # Unresolved resonance probability table sampling
 n_particles=10000 # Number of particles per cycle
-n_active=10000 # Number of inactive cycles
-n_inactive=1000 # Number of active cycles
+n_active=7000 # Number of inactive cycles
+n_inactive=500 # Number of active cycles
 
 # Detectors
 energy_structure='scale44' # Name of predefined energy structure to use for detectors
-n_samp=20 # Number of sampled pebbles to see if it the grid is converged
+n_samp=100 # Number of sampled pebbles to see if it the grid is converged
 
 # %% Modules
 
@@ -277,7 +277,7 @@ det_file=open(path+'detectors','w')
 Nr=2
 size_bins_R=delta_x/(2*Nr)
 size_bins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
-size_bin_max=max(size_bins_R,size_bins_Z)
+size_bin_max=max(size_bins_R,size_bins_Z)/2
 while size_bin_max>pebble_rad[-1]:
     Nbins_R=delta_x/(2*Nr)
     Nbins_Z=delta_z/(int(2*Nr*delta_z/delta_x))

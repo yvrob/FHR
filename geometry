@@ -1,9 +1,4 @@
 
-    %%---plotting geometry
-    plot 1 8571 10000
-    plot 3 10000 10000 305.5
-    
-    
 %%---surf for core
 surf infinite inf
 surf core_cyl cylz 0 0 105 180.5 430.5 % infinite cylinder 
