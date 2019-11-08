@@ -36,8 +36,8 @@ n_inactive=500 # Number of active cycles
 
 # Detectors
 energy_structure='scale44' # Name of predefined energy structure to use for detectors
-n_samp=100 # Number of sampled pebbles to see if it the grid is converged
-r_samp=rad_core*0.75 # Maximum distance from core center where pebbles can be sampled
+n_samp=30 # Number of sampled pebbles to see if it the grid is converged
+frac_samp=0.75 # Parameter to control where pebbles can be sampled: 1: whole core -> 0
 # %% Modules
 
 from time import time
@@ -283,7 +283,7 @@ while size_bin_max>pebble_rad[-1]:
     Nbins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
     string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {}\n'.format(Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,zmin-pebble_rad[-1],zmax+pebble_rad[-1],int(Nr*delta_z/delta_x))
     det_file.write(string)
-    Nr+=3
+    Nr+=1
     size_bins_R=delta_x/(2*Nr)
     size_bins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
     size_bin_max=max(size_bins_R,size_bins_Z)
@@ -297,7 +297,8 @@ if n_samp!=0:
             values_line=re.findall("[-+]?[.]?[\d]+(?:,\d\d\d)*[\.]?\d*(?:[eE][-+]?\d+)?",line)
             x=float(values_line[0])
             y=float(values_line[1])
-            if x**2+y**2<=r_samp**2:
+            z=float(values_line[2])
+            if x**2+y**2<=(rad_core*frac_samp)**2 and z-zmin>=(1-frac_samp)/2*(zmax-zmin) and zmax-z>=(1-frac_samp)/2*(zmax-zmin) :
                 allowed_sample.append(index)
             index+=1
 
