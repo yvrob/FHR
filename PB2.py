@@ -303,6 +303,7 @@ if n_samp!=0:
 
         sampling_list=random.sample(allowed_sample, n_samp)
         
+    with open(path+"fpb_pos", 'r') as istr: 
         index=0
         for line in istr:
             if index in sampling_list:
