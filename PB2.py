@@ -277,16 +277,16 @@ det_file=open(path+'detectors','w')
 Nr=2
 size_bins_R=delta_x/(2*Nr)
 size_bins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
-size_bin_max=max(size_bins_R,size_bins_Z)/2
+size_bin_max=max(size_bins_R,size_bins_Z)
 while size_bin_max>pebble_rad[-1]:
     Nbins_R=delta_x/(2*Nr)
     Nbins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
     string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {}\n'.format(Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,zmin-pebble_rad[-1],zmax+pebble_rad[-1],int(Nr*delta_z/delta_x))
     det_file.write(string)
-    Nr+=3
+    Nr+=1
     size_bins_R=delta_x/(2*Nr)
     size_bins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
-    size_bin_max=max(size_bins_R,size_bins_Z)
+    size_bin_max=max(size_bins_R,size_bins_Z)*2
 
 if n_samp!=0:
     sampling_list=random.sample(range(n_pebbles), n_samp)

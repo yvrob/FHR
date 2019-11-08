@@ -1,106 +1,135 @@
 det flux_2 dx -111.0 111.0 2 dy -111.0 111.0 2 dz 174.5 436.5 2
+det flux_3 dx -111.0 111.0 3 dy -111.0 111.0 3 dz 174.5 436.5 3
+det flux_4 dx -111.0 111.0 4 dy -111.0 111.0 4 dz 174.5 436.5 4
 det flux_5 dx -111.0 111.0 5 dy -111.0 111.0 5 dz 174.5 436.5 5
+det flux_6 dx -111.0 111.0 6 dy -111.0 111.0 6 dz 174.5 436.5 6
+det flux_7 dx -111.0 111.0 7 dy -111.0 111.0 7 dz 174.5 436.5 8
 det flux_8 dx -111.0 111.0 8 dy -111.0 111.0 8 dz 174.5 436.5 9
+det flux_9 dx -111.0 111.0 9 dy -111.0 111.0 9 dz 174.5 436.5 10
+det flux_10 dx -111.0 111.0 10 dy -111.0 111.0 10 dz 174.5 436.5 11
 det flux_11 dx -111.0 111.0 11 dy -111.0 111.0 11 dz 174.5 436.5 12
+det flux_12 dx -111.0 111.0 12 dy -111.0 111.0 12 dz 174.5 436.5 13
+det flux_13 dx -111.0 111.0 13 dy -111.0 111.0 13 dz 174.5 436.5 15
 det flux_14 dx -111.0 111.0 14 dy -111.0 111.0 14 dz 174.5 436.5 16
+det flux_15 dx -111.0 111.0 15 dy -111.0 111.0 15 dz 174.5 436.5 17
+det flux_16 dx -111.0 111.0 16 dy -111.0 111.0 16 dz 174.5 436.5 18
 det flux_17 dx -111.0 111.0 17 dy -111.0 111.0 17 dz 174.5 436.5 19
-det sample_75 du 75
-det sample_85 du 85
-det sample_213 du 213
-det sample_217 du 217
-det sample_255 du 255
-det sample_311 du 311
-det sample_352 du 352
-det sample_451 du 451
-det sample_582 du 582
-det sample_596 du 596
-det sample_608 du 608
-det sample_729 du 729
-det sample_760 du 760
-det sample_762 du 762
-det sample_803 du 803
-det sample_828 du 828
-det sample_1004 du 1004
-det sample_1143 du 1143
-det sample_1146 du 1146
-det sample_1182 du 1182
-det sample_1327 du 1327
-det sample_1355 du 1355
-det sample_1391 du 1391
-det sample_1412 du 1412
-det sample_1458 du 1458
-det sample_1518 du 1518
-det sample_1545 du 1545
-det sample_1594 du 1594
-det sample_1604 du 1604
-det sample_1608 du 1608
-det sample_1619 du 1619
-det sample_1638 du 1638
-det sample_1691 du 1691
-det sample_1745 du 1745
-det sample_1901 du 1901
-det sample_1967 du 1967
-det sample_2079 du 2079
-det sample_2093 du 2093
-det sample_2718 du 2718
-det sample_2775 du 2775
-det sample_2782 du 2782
-det sample_2798 du 2798
-det sample_2806 du 2806
-det sample_2812 du 2812
-det sample_2926 du 2926
-det sample_2993 du 2993
-det sample_3196 du 3196
-det sample_3244 du 3244
-det sample_3427 du 3427
-det sample_3494 du 3494
-det sample_3499 du 3499
-det sample_3539 du 3539
-det sample_3591 du 3591
-det sample_3618 du 3618
-det sample_3713 du 3713
-det sample_3722 du 3722
-det sample_3768 du 3768
-det sample_4013 du 4013
+det flux_18 dx -111.0 111.0 18 dy -111.0 111.0 18 dz 174.5 436.5 20
+det flux_19 dx -111.0 111.0 19 dy -111.0 111.0 19 dz 174.5 436.5 22
+det flux_20 dx -111.0 111.0 20 dy -111.0 111.0 20 dz 174.5 436.5 23
+det flux_21 dx -111.0 111.0 21 dy -111.0 111.0 21 dz 174.5 436.5 24
+det flux_22 dx -111.0 111.0 22 dy -111.0 111.0 22 dz 174.5 436.5 25
+det flux_23 dx -111.0 111.0 23 dy -111.0 111.0 23 dz 174.5 436.5 26
+det flux_24 dx -111.0 111.0 24 dy -111.0 111.0 24 dz 174.5 436.5 27
+det flux_25 dx -111.0 111.0 25 dy -111.0 111.0 25 dz 174.5 436.5 29
+det flux_26 dx -111.0 111.0 26 dy -111.0 111.0 26 dz 174.5 436.5 30
+det flux_27 dx -111.0 111.0 27 dy -111.0 111.0 27 dz 174.5 436.5 31
+det flux_28 dx -111.0 111.0 28 dy -111.0 111.0 28 dz 174.5 436.5 32
+det flux_29 dx -111.0 111.0 29 dy -111.0 111.0 29 dz 174.5 436.5 33
+det flux_30 dx -111.0 111.0 30 dy -111.0 111.0 30 dz 174.5 436.5 34
+det flux_31 dx -111.0 111.0 31 dy -111.0 111.0 31 dz 174.5 436.5 36
+det flux_32 dx -111.0 111.0 32 dy -111.0 111.0 32 dz 174.5 436.5 37
+det flux_33 dx -111.0 111.0 33 dy -111.0 111.0 33 dz 174.5 436.5 38
+det flux_34 dx -111.0 111.0 34 dy -111.0 111.0 34 dz 174.5 436.5 39
+det flux_35 dx -111.0 111.0 35 dy -111.0 111.0 35 dz 174.5 436.5 40
+det flux_36 dx -111.0 111.0 36 dy -111.0 111.0 36 dz 174.5 436.5 41
+det sample_0 du 0
+det sample_174 du 174
+det sample_199 du 199
+det sample_286 du 286
+det sample_309 du 309
+det sample_335 du 335
+det sample_365 du 365
+det sample_378 du 378
+det sample_380 du 380
+det sample_612 du 612
+det sample_673 du 673
+det sample_678 du 678
+det sample_865 du 865
+det sample_910 du 910
+det sample_959 du 959
+det sample_1227 du 1227
+det sample_1248 du 1248
+det sample_1310 du 1310
+det sample_1361 du 1361
+det sample_1370 du 1370
+det sample_1415 du 1415
+det sample_1445 du 1445
+det sample_1548 du 1548
+det sample_1593 du 1593
+det sample_1636 du 1636
+det sample_1661 du 1661
+det sample_1782 du 1782
+det sample_1799 du 1799
+det sample_1813 du 1813
+det sample_1971 du 1971
+det sample_2191 du 2191
+det sample_2200 du 2200
+det sample_2273 du 2273
+det sample_2289 du 2289
+det sample_2314 du 2314
+det sample_2317 du 2317
+det sample_2523 du 2523
+det sample_2530 du 2530
+det sample_2560 du 2560
+det sample_2605 du 2605
+det sample_2764 du 2764
+det sample_2795 du 2795
+det sample_2837 du 2837
+det sample_3025 du 3025
+det sample_3029 du 3029
+det sample_3259 du 3259
+det sample_3270 du 3270
+det sample_3302 du 3302
+det sample_3348 du 3348
+det sample_3418 du 3418
+det sample_3537 du 3537
+det sample_3578 du 3578
+det sample_3782 du 3782
+det sample_3796 du 3796
+det sample_3801 du 3801
+det sample_3887 du 3887
+det sample_3962 du 3962
+det sample_3968 du 3968
+det sample_4041 du 4041
 det sample_4078 du 4078
-det sample_4141 du 4141
-det sample_4145 du 4145
-det sample_4152 du 4152
-det sample_4220 du 4220
-det sample_4232 du 4232
-det sample_4265 du 4265
-det sample_4270 du 4270
-det sample_4301 du 4301
-det sample_4426 du 4426
-det sample_4434 du 4434
-det sample_4513 du 4513
-det sample_4683 du 4683
-det sample_4686 du 4686
+det sample_4092 du 4092
+det sample_4210 du 4210
+det sample_4320 du 4320
+det sample_4510 du 4510
+det sample_4601 du 4601
+det sample_4668 du 4668
 det sample_4694 du 4694
-det sample_4785 du 4785
-det sample_4818 du 4818
-det sample_4826 du 4826
-det sample_4841 du 4841
-det sample_4890 du 4890
-det sample_4954 du 4954
-det sample_4995 du 4995
-det sample_4997 du 4997
-det sample_5036 du 5036
-det sample_5089 du 5089
+det sample_4740 du 4740
+det sample_4766 du 4766
+det sample_4906 du 4906
+det sample_4922 du 4922
+det sample_4930 du 4930
+det sample_4939 du 4939
+det sample_4966 du 4966
+det sample_5002 du 5002
+det sample_5045 du 5045
+det sample_5063 du 5063
+det sample_5067 du 5067
+det sample_5070 du 5070
+det sample_5115 du 5115
+det sample_5133 du 5133
 det sample_5149 du 5149
-det sample_5192 du 5192
-det sample_5221 du 5221
-det sample_5257 du 5257
-det sample_5334 du 5334
-det sample_5412 du 5412
-det sample_5427 du 5427
-det sample_5569 du 5569
-det sample_5657 du 5657
-det sample_5677 du 5677
-det sample_5764 du 5764
-det sample_5820 du 5820
-det sample_5908 du 5908
-det sample_5938 du 5938
-det sample_6077 du 6077
-det sample_6189 du 6189
-det sample_6285 du 6285
+det sample_5200 du 5200
+det sample_5267 du 5267
+det sample_5303 du 5303
+det sample_5304 du 5304
+det sample_5434 du 5434
+det sample_5471 du 5471
+det sample_5507 du 5507
+det sample_5531 du 5531
+det sample_5574 du 5574
+det sample_5709 du 5709
+det sample_5746 du 5746
+det sample_5773 du 5773
+det sample_5875 du 5875
+det sample_6082 du 6082
+det sample_6086 du 6086
+det sample_6128 du 6128
+det sample_6245 du 6245
+det sample_6329 du 6329
