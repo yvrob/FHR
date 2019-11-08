@@ -288,14 +288,21 @@ while size_bin_max>pebble_rad[-1]:
     size_bins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
     size_bin_max=max(size_bins_R,size_bins_Z)
 
-allowed_sample=[]
-distance=[(X[i]**2+Y[i]**2)**0.5 for i in range(len(X))]
-for i in range(1,n_pebbles):
-    if distance[i]<=r_samp:
-        allowed_sample.append(i)
+
 if n_samp!=0:
-    sampling_list=random.sample(allowed_sample, n_samp)
+    index=0
     with open(path+"fpb_pos", 'r') as istr:
+        allowed_sample=[]
+        for line in istr:
+            values_line=re.findall("[-+]?[.]?[\d]+(?:,\d\d\d)*[\.]?\d*(?:[eE][-+]?\d+)?",line)
+            x=float(values_line[0])
+            y=float(values_line[1])
+            if x**2+y**2<=r_samp**2:
+                allowed_sample.append(index)
+            index+=1
+
+        sampling_list=random.sample(allowed_sample, n_samp)
+        
         index=0
         for line in istr:
             if index in sampling_list:
