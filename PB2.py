@@ -24,8 +24,8 @@ refl_thickness=0 # migration_length_C/20 # Thickness of the graphite external re
 power = 2.36e8 # Total power (W)
 
 # Simulation
-plot=False # Boolean to plot or not the geometry
-qual = 10000 # Quality of the plots (px)
+plot=True # Boolean to plot or not the geometry
+qual = 20000 # Quality of the plots (px)
 
 acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to cross sections library
 opti=4 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
@@ -37,7 +37,7 @@ n_inactive=500 # Number of active cycles
 # Detectors
 energy_structure='scale44' # Name of predefined energy structure to use for detectors
 n_samp=100 # Number of sampled pebbles to see if it the grid is converged
-
+r_samp=rad_core*0.75 # Maximum distance from core center where pebbles can be sampled
 # %% Modules
 
 from time import time
@@ -277,31 +277,34 @@ det_file=open(path+'detectors','w')
 Nr=2
 size_bins_R=delta_x/(2*Nr)
 size_bins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
-size_bin_max=max(size_bins_R,size_bins_Z)
+size_bin_max=max(size_bins_R,size_bins_Z)/2
 while size_bin_max>pebble_rad[-1]:
     Nbins_R=delta_x/(2*Nr)
     Nbins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
     string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {}\n'.format(Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,zmin-pebble_rad[-1],zmax+pebble_rad[-1],int(Nr*delta_z/delta_x))
     det_file.write(string)
-    Nr+=1
+    Nr+=3
     size_bins_R=delta_x/(2*Nr)
     size_bins_Z=delta_z/(int(2*Nr*delta_z/delta_x))
-    size_bin_max=max(size_bins_R,size_bins_Z)*2
+    size_bin_max=max(size_bins_R,size_bins_Z)
 
+allowed_sample=[]
+distance=[(X[i]**2+Y[i]**2)**0.5 for i in range(len(X))]
+for i in range(1,n_pebbles):
+    if distance[i]<=r_samp:
+        allowed_sample.append(i)
 if n_samp!=0:
-    sampling_list=random.sample(range(n_pebbles), n_samp)
+    sampling_list=random.sample(allowed_sample, n_samp)
     with open(path+"fpb_pos", 'r') as istr:
         index=0
         for line in istr:
             if index in sampling_list:
                 values_line=re.findall("[-+]?[.]?[\d]+(?:,\d\d\d)*[\.]?\d*(?:[eE][-+]?\d+)?",line)
                 string='det sample_{} du {}\n'.format(index,index)
-                sampling_list.remove(index)
                 det_file.write(string)
-            if len(sampling_list)==0:
-                break
-
             index+=1
+else:
+    sampling_list=[]
 det_file.close()
 
 # %% Write input file with simulation options
@@ -329,16 +332,33 @@ print('Time elapsed: {} s'.format(time()-t))
 # %% Plot results
 
 plt.close('all')
+COLOR = 'white'
+plt.rcParams['text.color'] = COLOR
+plt.rcParams['axes.labelcolor'] = COLOR
+plt.rcParams['xtick.color'] = COLOR
+plt.rcParams['ytick.color'] = COLOR
 ax = plt.subplot(111, projection='3d')
 X=[]
 Y=[]
 Z=[]
+import matplotlib.cm as cm
 with open(path+'fpb_pos') as file_:
     for line in file_:
         values_line=re.findall("[-+]?[.]?[\d]+(?:,\d\d\d)*[\.]?\d*(?:[eE][-+]?\d+)?",line)
         X.append(float(values_line[0]))
         Y.append(float(values_line[1]))
         Z.append(float(values_line[2]))
-ax.scatter3D(X,Y,Z,c='red')
+if n_samp==0:
+    C=cm.get_cmap('jet', len(X))
+    C=C(np.linspace(0, 1, len(X)))
+else:
+    C=np.hstack((np.ones((len(X),3)),0.2*np.ones((len(X),1))))
+    for i in sampling_list:
+        C[i,:]=[1,0,0,1]
+        
+ax.scatter3D(X,Y,Z,c=C,s=200)
 ax.set_facecolor((0.1,0.1,0.1))
+ax.set_xlabel('x [cm]')
+ax.set_ylabel('z [cm]')
+ax.set_zlabel('z [cm]')
 
