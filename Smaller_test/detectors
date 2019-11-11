@@ -1,0 +1,5 @@
+
+ene E 4 "scale44"
+
+det flux dl u_pb
+det flux_spectrum dl u_pb de E

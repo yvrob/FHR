@@ -1,0 +1,26 @@
+
+%%% Fuel 1
+
+%---Material
+mat fuel_1 -10.5 tmp 1073 burn 1
+92235.09c 20.0
+92238.09c 80.0
+12000.09c 50.0
+8016.09c 100.0
+                                                                                                                                                                                                                                   
+%---Triso particle                                                                                                                                                                                                                            
+particle p1
+fuel_1 0.02
+Buffer1074 0.03                                                                                                                                                                                                                                 
+iPyC1074 0.0335                                                                                                                                                                                                                                   
+SiC1074 0.037                                                                                                                                                                                                                                    
+oPyC1074 0.0405                                                                                                                                                                                                                                   
+Matrix1074                                                                                                                                                                                                                                    
+
+%---Triso  lattice
+lat l1 6 0. 0. 0.08860629 p1
+    
+%---Fill pebble with lattice
+cell c1_1 1 CG1074 -central_graphite
+cell c1_2 1 fill l1 central_graphite -graphite_mat
+cell c1_3 1 Shell1074 graphite_mat

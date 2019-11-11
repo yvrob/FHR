@@ -1,0 +1,22 @@
+set mcvol 10000000
+
+%set egrid 5E-3 1E-5 10.0
+dep bustep 10 10 10 10 10 10
+set his 1
+set memfrac 0.97
+
+include coreMaterials
+include fuel
+include detectors
+include geometry
+
+
+set declib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7.dec"
+set nfylib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7.nfy"
+set acelib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata"
+set opti 4
+%set ures 1
+set power 236000000.0
+set pop 1000 500 50
+set pcc leli 10 10
+

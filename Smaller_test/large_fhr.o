@@ -1,0 +1,96 @@
+
+  _                   .-=-.           .-=-.          .-==-.       
+ { }      __        .' O o '.       .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `._____.'       `.____.'              
+
+Serpent 2 beta
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 2.1.32 (May 16, 2019) -- Contact: serpent@vtt.fi
+
+ - Reference: J. Leppanen, et al. "The Serpent Monte Carlo code: Status,
+              development and applications in 2013." Ann. Nucl. Energy,
+              82 (2015) 142-150.
+
+ - Compiled Nov  8 2019 13:34:14
+
+ - MPI Parallel calculation mode available
+
+ - OpenMP Parallel calculation mode available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Sat Nov  9 17:12:38 2019
+
+Reading input file "input"...
+Reading input file "coreMaterials"...
+Reading input file "fuel"...
+Reading input file "detectors"...
+Reading input file "geometry"...
+
+Checking duplicate input definitions...
+OK.
+
+Reading pebble bed type geometry:
+
+Reading data from file "fpb_pos"...
+
+Dividing burnable materials...
+OK.
+
+Creating geometry...
+OK.
+
+Counting geometry zones...
+
+The geometry consists of 5 levels:
+
+Level 0 size: max 2 zones
+Level 1 size: max 520847 zones
+Level 2 size: max 3 zones
+Level 3 size: max 1 zones
+Level 4 size: max 6 zones
+
+Processing cells...
+OK.
+
+Linking materials to geometry...
+OK.
+
+Dividing materials into depletion zones...
+
+Material fuel_1:
+
+ - 520846 cells
+ - 520846 depletion zones in total
+
+Sorting lists (this may take a while)...
+OK.
+
+Counting cells...
+OK.
+
+
+***** Sat Nov  9 19:00:00 2019
+
+Input error:
+
+Out of memory error (allocating 60.0Gb, limit 50.3Gb = 0.80 * 62.9Gb)
+
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[41934,1],0]
+  Exit code:    255
+--------------------------------------------------------------------------

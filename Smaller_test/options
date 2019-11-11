@@ -1,0 +1,6 @@
+set declib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7.dec"
+set nfylib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7.nfy"
+set egrid 5E-3 1E-5 10.0
+dep bustep 10 10 10 10 10 10
+set his 1
+set memfrac 0.97
