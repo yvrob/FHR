@@ -11,7 +11,7 @@ fuel_temp=1073 # fuel temperature (K)
 fuel_mass_dens=10.5 # fuel mass density (g/cm^3 = t/m^3)
 
 # Pebble lattice information
-multiplier=15 # Just to keep the proportions with the model
+multiplier=4 # Just to keep the proportions with the model
 pebble_rad=[1.251140*multiplier, 1.4*multiplier,1.5*multiplier] # List of radii for the pebbles (cm) [innner graphite, graphite matrix, external radius]
 pebble_a=2.275414*2*multiplier # Pebble FCC cell side length (cm)
 
@@ -25,19 +25,19 @@ power = 2.36e8 # Total power (W)
 
 # Simulation
 plot=True # Boolean to plot or not the geometry
-qual = 7500 # Quality of the plots (px)
+qual = 5000 # Quality of the plots (px)
 
 acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to cross sections library
 opti=4 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
 ures = 1 # Unresolved resonance probability table sampling
-n_particles=1000 # Number of particles per cycle
-n_active=700 # Number of inactive cycles
-n_inactive=50 # Number of active cycles
+n_particles=10000 # Number of particles per cycle
+n_active=10000 # Number of inactive cycles
+n_inactive=1000 # Number of active cycles
 
 # Detectors
 energy_structure='scale44' # Name of predefined energy structure to use for detectors
-n_samp=1 # Number of sampled pebbles to see if it the grid is converged
-frac_samp=0.3 # Parameter to control where pebbles can be sampled: 1: whole core -> 0: nothing
+n_samp=30 # Number of sampled pebbles to see if it the grid is converged
+frac_samp=0.7 # Parameter to control where pebbles can be sampled: 1: whole core -> 0: nothing
 # %% Modules
 
 from time import time
@@ -106,9 +106,6 @@ min_Z=zcenter-n_cells_Z*pebble_a
 max_Z=zcenter+n_cells_Z*pebble_a
 delta_x=(max_X-min_X)
 delta_z=(max_Z-min_Z)
-
-print(delta_x)
-print(delta_z)
 
 # Fill a cube with boundaries dimensions with FCC cells
 file=open(path+'fpb_pos','w')

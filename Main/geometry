@@ -1,7 +1,7 @@
 
     %%---plotting geometry
-    plot 1 7499 7500
-    plot 3 7500 7500 305.5
+    plot 1 1999 2000
+    plot 3 2000 2000 305.5
     
     
 %%---surf for core
