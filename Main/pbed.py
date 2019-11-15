@@ -283,10 +283,10 @@ height=zmax-zmin
 size_bins_R=diam/Nr
 size_bins_Z=height/(int(Nr*height/diam))
 while max(size_bins_R,size_bins_Z) > 2*pebble_rad[-1]:
-    size_bins_R=diam/Nr                                                                                                                                                                                            
-    size_bins_Z=height/(int(Nr*height/diam))                                                                                                                                                                       
+    size_bins_R=(diam+2*pebble_rad[-1])/Nr                                                                                                                                                                                            
+    size_bins_Z=(height+2*pebble_rad[-1])/(int(Nr*height/diam))                                                                                                                                                                       
     vol_bin=size_bins_R*size_bins_R*size_bins_Z
-    string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {} dv {}\n'.format(Nr,-rad_core,rad_core,Nr,-rad_core,rad_core,Nr,zmin,zmax,int(Nr*height/diam),vol_bin)
+    string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {} dv {}\n'.format(Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,zmin-pebble_rad[-1],zmax+pebble_rad[-1],int(Nr*height/diam),vol_bin)
     det_file.write(string)
     Nr+=1
 
