@@ -1,7 +1,7 @@
 
     %%---plotting geometry
-    plot 1 3750 5000
-    plot 3 5000 5000 305.5
+    plot 1 6428 7500
+    plot 3 7500 7500 305.5
     
     
 %%---surf for core
@@ -9,8 +9,8 @@ surf infinite inf
 surf core_cyl cylz 0 0 105 180.5 430.5 % infinite cylinder 
 
 %%---surf for triso inside fuel pebbles (spheres)
-surf central_graphite sph 0 0 0 10.00912 % internal graphite
-surf graphite_mat sph 0 0 0 11.2 % graphite matrix maximum radius
+surf central_graphite sph 0 0 0 5.00456 % internal graphite
+surf graphite_mat sph 0 0 0 5.6 % graphite matrix maximum radius
 
 
     cell out2 0 outside core_cyl

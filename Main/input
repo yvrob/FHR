@@ -8,4 +8,4 @@ set acelib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.x
 set opti 4
 set ures 1
 set power 236000000.0
-set pop 500 7000 500
+set pop 10000 7000 500
