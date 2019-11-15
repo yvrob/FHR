@@ -1,47 +1,39 @@
-det flux_2 dx -111.0 111.0 2 dy -111.0 111.0 2 dz 174.5 436.5 2
-det flux_3 dx -111.0 111.0 3 dy -111.0 111.0 3 dz 174.5 436.5 3
-det flux_4 dx -111.0 111.0 4 dy -111.0 111.0 4 dz 174.5 436.5 4
-det flux_5 dx -111.0 111.0 5 dy -111.0 111.0 5 dz 174.5 436.5 5
-det flux_6 dx -111.0 111.0 6 dy -111.0 111.0 6 dz 174.5 436.5 6
-det flux_7 dx -111.0 111.0 7 dy -111.0 111.0 7 dz 174.5 436.5 8
-det flux_8 dx -111.0 111.0 8 dy -111.0 111.0 8 dz 174.5 436.5 9
-det flux_9 dx -111.0 111.0 9 dy -111.0 111.0 9 dz 174.5 436.5 10
-det flux_10 dx -111.0 111.0 10 dy -111.0 111.0 10 dz 174.5 436.5 11
-det flux_11 dx -111.0 111.0 11 dy -111.0 111.0 11 dz 174.5 436.5 12
-det flux_12 dx -111.0 111.0 12 dy -111.0 111.0 12 dz 174.5 436.5 13
-det flux_13 dx -111.0 111.0 13 dy -111.0 111.0 13 dz 174.5 436.5 15
-det flux_14 dx -111.0 111.0 14 dy -111.0 111.0 14 dz 174.5 436.5 16
-det flux_15 dx -111.0 111.0 15 dy -111.0 111.0 15 dz 174.5 436.5 17
-det flux_16 dx -111.0 111.0 16 dy -111.0 111.0 16 dz 174.5 436.5 18
-det flux_17 dx -111.0 111.0 17 dy -111.0 111.0 17 dz 174.5 436.5 19
-det flux_18 dx -111.0 111.0 18 dy -111.0 111.0 18 dz 174.5 436.5 20
-det sample_930 du 930
-det sample_1605 du 1605
-det sample_1722 du 1722
-det sample_1897 du 1897
-det sample_2802 du 2802
-det sample_2850 du 2850
-det sample_2887 du 2887
-det sample_3008 du 3008
-det sample_3234 du 3234
-det sample_3268 du 3268
-det sample_3278 du 3278
-det sample_3329 du 3329
-det sample_3621 du 3621
-det sample_4228 du 4228
-det sample_4229 du 4229
-det sample_4270 du 4270
-det sample_4313 du 4313
-det sample_4363 du 4363
-det sample_4367 du 4367
-det sample_4373 du 4373
-det sample_4649 du 4649
-det sample_4922 du 4922
-det sample_5080 du 5080
-det sample_5129 du 5129
-det sample_5218 du 5218
-det sample_5286 du 5286
-det sample_5600 du 5600
-det sample_5651 du 5651
-det sample_5682 du 5682
-det sample_5778 du 5778
+det flux_2 dx -105 105 2 dy -105 105 2 dz 180.5 430.5 2 dv 1378125.0
+det flux_3 dx -105 105 3 dy -105 105 3 dz 180.5 430.5 3 dv 408333.3333333333
+det flux_4 dx -105 105 4 dy -105 105 4 dz 180.5 430.5 4 dv 172265.625
+det flux_5 dx -105 105 5 dy -105 105 5 dz 180.5 430.5 5 dv 88200.0
+det flux_6 dx -105 105 6 dy -105 105 6 dz 180.5 430.5 7 dv 43750.0
+det flux_7 dx -105 105 7 dy -105 105 7 dz 180.5 430.5 8 dv 28125.0
+det flux_8 dx -105 105 8 dy -105 105 8 dz 180.5 430.5 9 dv 19140.625
+det flux_9 dx -105 105 9 dy -105 105 9 dz 180.5 430.5 10 dv 13611.11111111111
+det flux_10 dx -105 105 10 dy -105 105 10 dz 180.5 430.5 11 dv 10022.727272727272
+det sample_70 du 70 dv 7238.229473870882
+det sample_74 du 74 dv 7238.229473870882
+det sample_77 du 77 dv 7238.229473870882
+det sample_99 du 99 dv 7238.229473870882
+det sample_206 du 206 dv 7238.229473870882
+det sample_208 du 208 dv 7238.229473870882
+det sample_222 du 222 dv 7238.229473870882
+det sample_255 du 255 dv 7238.229473870882
+det sample_290 du 290 dv 7238.229473870882
+det sample_318 du 318 dv 7238.229473870882
+det sample_324 du 324 dv 7238.229473870882
+det sample_351 du 351 dv 7238.229473870882
+det sample_378 du 378 dv 7238.229473870882
+det sample_379 du 379 dv 7238.229473870882
+det sample_392 du 392 dv 7238.229473870882
+det sample_451 du 451 dv 7238.229473870882
+det sample_463 du 463 dv 7238.229473870882
+det sample_477 du 477 dv 7238.229473870882
+det sample_490 du 490 dv 7238.229473870882
+det sample_496 du 496 dv 7238.229473870882
+det sample_568 du 568 dv 7238.229473870882
+det sample_574 du 574 dv 7238.229473870882
+det sample_575 du 575 dv 7238.229473870882
+det sample_617 du 617 dv 7238.229473870882
+det sample_645 du 645 dv 7238.229473870882
+det sample_646 du 646 dv 7238.229473870882
+det sample_756 du 756 dv 7238.229473870882
+det sample_777 du 777 dv 7238.229473870882
+det sample_781 du 781 dv 7238.229473870882
+det sample_788 du 788 dv 7238.229473870882
