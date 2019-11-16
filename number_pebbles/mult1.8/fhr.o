@@ -1,0 +1,82 @@
+
+  _                   .-=-.           .-=-.          .-==-.       
+ { }      __        .' O o '.       .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `._____.'       `.____.'              
+
+Serpent 2 beta
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 2.1.30 (February 14, 2018) -- Contact: serpent@vtt.fi
+
+ - Reference: J. Leppanen, et al. "The Serpent Monte Carlo code: Status,
+              development and applications in 2013." Ann. Nucl. Energy,
+              82 (2015) 142-150.
+
+ - Compiled Jul 31 2018 16:57:04
+
+ - MPI Parallel calculation mode available
+
+ - OpenMP Parallel calculation mode available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Sat Nov 16 00:26:27 2019
+
+Reading input file "input"...
+Reading input file "coreMaterials"...
+Reading input file "fuel"...
+Reading input file "detectors"...
+Reading input file "geometry"...
+
+
+ ***** Warning: Large input file, duplicate definitions not checked
+
+Reading pebble bed type geometry:
+
+Reading data from file "fpb_pos"...
+
+Creating geometry...
+OK.
+
+Counting geometry zones...
+
+The geometry consists of 5 levels:
+
+Level 0 size: max 2 zones
+Level 1 size: max 65975 zones
+Level 2 size: max 3 zones
+Level 3 size: max 1 zones
+Level 4 size: max 6 zones
+
+Processing cells...
+OK.
+
+Linking materials to geometry...
+OK.
+
+Counting cells...
+OK.
+
+Plotting geometry:
+
+   0% complete
+  50% complete
+ 100% complete
+
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[16891,1],0]
+  Exit code:    255
+--------------------------------------------------------------------------

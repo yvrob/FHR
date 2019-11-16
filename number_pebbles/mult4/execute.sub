@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#SBATCH --job-name=fhr4
+
+#SBATCH --output=fhr.o
+
+#SBATCH --error=fhr.error
+
+#SBATCH --partition=savio
+# #SBATCH --partition=savio_bigmem
+
+#SBATCH --time=72:00:00
+
+#SBATCH --nodes=1
+
+#SBATCH --ntasks-per-node=1
+
+#SBATCH--cpus-per-task=20
+
+# QoS: savio_normal
+
+# #SBATCH --qos=savio_lowprio
+#SBATCH --qos=nuclear_savio_normal  
+#
+
+# Account:
+
+#SBATCH -A co_nuclear
+
+#SBATCH --mail-user=yves.robert@berkeley.edu
+#SBATCH --mail-type=all
+
+# run command
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+python pbed.py
+mpirun -np 1 --map-by ppr:1:node:pe=20 /global/home/users/yvesrobert/Softwares/serpent2.1.30/serpent2.1.30_gcc/sss2 -omp 20 input -plot

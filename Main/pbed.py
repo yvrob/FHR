@@ -6,12 +6,12 @@ path='./'
 # Triso lattice information
 triso_radii = [0.02,0.03,0.0335,0.0370,0.0405] # List of radii for the triso particles (cm) [fuel, buffer, inner PyC, SiC, outer PyC]
 triso_a=0.08860629 # Triso FCC cell side length (cm)
-fuel_enrich=20e-2 # U235 atomic enrichment in triso particles (fraction)
+fuel_enrich=19.9e-2 # U235 atomic enrichment in triso particles (fraction)
 fuel_temp=1073 # fuel temperature (K)
 fuel_mass_dens=10.5 # fuel mass density (g/cm^3 = t/m^3)
 
 # Pebble lattice information
-multiplier=4 # Just to keep the proportions with the model
+multiplier=1 # Just to keep the proportions with the model
 pebble_rad=[1.251140*multiplier, 1.4*multiplier,1.5*multiplier] # List of radii for the pebbles (cm) [innner graphite, graphite matrix, external radius]
 pebble_a=2.275414*2*multiplier # Pebble FCC cell side length (cm)
 
@@ -28,16 +28,16 @@ plot=True # Boolean to plot or not the geometry
 qual = 5000 # Quality of the plots (px)
 
 acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to cross sections library
-opti=4 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
+opti=1 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
 ures = 1 # Unresolved resonance probability table sampling
-n_particles=10000 # Number of particles per cycle
+n_particles=100000 # Number of particles per cycle
 n_active=10000 # Number of inactive cycles
 n_inactive=1000 # Number of active cycles
 
 # Detectors
 energy_structure='scale44' # Name of predefined energy structure to use for detectors
-n_samp=30 # Number of sampled pebbles to see if it the grid is converged
-frac_samp=0.7 # Parameter to control where pebbles can be sampled: 1: whole core -> 0: nothing
+n_samp=50 # Number of sampled pebbles to see if it the grid is converged
+frac_samp=0.6 # Parameter to control where pebbles can be sampled: 1: whole core -> 0: nothing
 # %% Modules
 
 from time import time
@@ -274,7 +274,7 @@ det_file=open(path+'detectors','w')
 #for i in range(len(pbed)):
 #    det_file.write('det flux_{} de E du {}\n'.format(i+1,i+1))
 
-Nr=2
+Nr=4
 diam=2*rad_core
 height=zmax-zmin
 size_bins_R=diam/Nr
@@ -285,7 +285,7 @@ while max(size_bins_R,size_bins_Z) > 2*pebble_rad[-1]:
     vol_bin=size_bins_R*size_bins_R*size_bins_Z
     string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {} dv {}\n'.format(Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,zmin-pebble_rad[-1],zmax+pebble_rad[-1],int(Nr*height/diam),vol_bin)
     det_file.write(string)
-    Nr+=1
+    Nr+=4
 
 if n_samp!=0:
     index=0

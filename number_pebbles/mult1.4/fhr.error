@@ -1,0 +1,2 @@
+QXcbConnection: Could not connect to display :0.0
+/var/spool/slurmd/job5206597/slurm_script: line 35: 69500 Aborted                 python pbed.py
