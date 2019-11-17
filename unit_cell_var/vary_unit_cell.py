@@ -14,16 +14,21 @@ exec_file='execute.sub'
 
 parameter='Tf'
 parameter_values=[700,800,900,1000,1100]
-parameter='fuel_mult'
-parameter_values=[0.5,1,1.5]
-parameter='fp_mult'
-parameter_values=[0.5,1,1.5]
+#parameter='fuel_mult'
+#parameter_values=[0.5,1,1.5]
+#parameter='fp_mult'
+#parameter_values=[0.5,1,1.5]
 
 complete_default_path=path+folder_case+default_folder
 for i in range(len(parameter_values)):
     new_folder=path+folder_case+parameter+'_'+str(parameter_values[i])+'/'
     try:
         os.mkdir(new_folder)
+    except:
+        print('Exists already')
+    try:
+        shutil.copy(complete_default_path+'detectors',new_folder+'detectors')
+        shutil.copy(complete_default_path+'isotopes',new_folder+'isotopes')
     except:
         print('Exists already')
     if parameter=='Tf':
@@ -156,6 +161,7 @@ for i in range(len(parameter_values)):
     if run_sbatch==True:
         try:
             os.chdir(new_folder)
+#            subprocess.check_call(['python','create_detectors.py'])
             subprocess.check_call(['sbatch',exec_file])
             os.chdir(path)
         except:

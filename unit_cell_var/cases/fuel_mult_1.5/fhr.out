@@ -56,8 +56,8 @@
     1   0  3006.12c      12c  TRA    3   6 0    6.01507  1200.0          N/A  I-----T-------------  lithium 6 (Li-6)
     2   0  3007.12c      12c  TRA    3   7 0    7.01600  1200.0          N/A  I-----T-------------  lithium 7 (Li-7)
     3   0  4009.12c      12c  TRA    4   9 0    9.01220  1200.0          N/A  I-----T-------------  beryllium 9 (Be-9)
-    4   0  6000.12c      12c  TRA    6   0 0   12.00110  1200.0          N/A  I-----T-------------  natural carbon (C-nat)
-    5   0  6000.09c      09c  TRA    6   0 0   12.00110   900.0          N/A  I-----T-------------  natural carbon (C-nat)
+    4   0  6000.09c      09c  TRA    6   0 0   12.00110   900.0          N/A  I-----T-------------  natural carbon (C-nat)
+    5   0  6000.12c      12c  TRA    6   0 0   12.00110  1200.0          N/A  I-----T-------------  natural carbon (C-nat)
     6   0  6000.12s      12s  TRA    6   0 0   12.00110  1200.0          N/A  I-----TS------------  natural carbon (C-nat)
     7   0  6000.12s      12s  TRA    6   0 0   12.00110  1200.0          N/A  I-----TS------------  natural carbon (C-nat)
     8   0  6000.12s      12s  TRA    6   0 0   12.00110  1200.0          N/A  I-----TS------------  natural carbon (C-nat)
@@ -193,7 +193,7 @@
 
  Nuclide    1 / 135 : 3006.12c -- lithium 6 (Li-6)
 
- Pointers                     : 30574 2736
+ Pointers                     : 494394 2736
  Primary type                 : Transport
  Nuclide ZAI                  : 30060
  Library ID                   : 12c
@@ -280,7 +280,7 @@
 
  Nuclide    2 / 135 : 3007.12c -- lithium 7 (Li-7)
 
- Pointers                     : 33678 3012
+ Pointers                     : 497498 3012
  Primary type                 : Transport
  Nuclide ZAI                  : 30070
  Library ID                   : 12c
@@ -369,7 +369,7 @@
 
  Nuclide    3 / 135 : 4009.12c -- beryllium 9 (Be-9)
 
- Pointers                     : 36928 3564
+ Pointers                     : 500748 3564
  Primary type                 : Transport
  Nuclide ZAI                  : 40090
  Library ID                   : 12c
@@ -429,79 +429,9 @@
    8    MT =    701  Q = -1.09180E+01 MeV  Emin = 1.21400E+01 MeV  : (n,t1)
    9    MT =    800  Q = -6.00000E-01 MeV  Emin = 6.67153E-01 MeV  : (n,alpha) to ground state
 
- Nuclide    4 / 135 : 6000.12c -- natural carbon (C-nat)
+ Nuclide    4 / 135 : 6000.09c -- natural carbon (C-nat)
 
- Pointers                     : 23923 4392
- Primary type                 : Transport
- Nuclide ZAI                  : 60000
- Library ID                   : 12c
- Cross section data file      : /global/home/groups/co_nuclear/serpent/xsdata/endfb7/acedata/6000ENDF7.ace
- Atomic weight (AW)           : 12.00110
- Atomic weight ratio (AWR)    : 11.89800
- Temperature                  : 1200.0 Kelvin
- XS temperature               : 1200.0 Kelvin
- Minimum and maximum energy   : 1.00000E-11 1.50000E+02
- Half-life                    : N/A
- Specific ingestion toxicity  : N/A
- Specific inhalation toxicity : N/A
-
- - Nuclide is not involved in burnup calculation
- - Nuclide has neutron transport data
- - Nuclide has no photon transport data
- - Nuclide has no S(a,b) data
- - Nuclide has no isomeric branching data
- - Nuclide is not fissile
- - Nuclide is not a delayed neutron precursor
- - Nuclide has no delayed neutron data
- - Nuclide has no ures ptable data
- - Nuclide temperature is not adjusted with TMS
- - Nuclide has no dosimetry data
- - Nuclide has no decay data
- - Nuclide has no supplementary transmutation cross section data
- - Nuclide has no NFY data
- - Nuclide has no SFY data
-
- - 20 reaction channels
- - 4 special reactions
- - No transmutation reactions
- - No transmutation branch reactions
- - No decay reactions
- - No decay branch reactions
- - No transmutation paths
-
- 20 reactions channel:
-
-   1    MT =      2  Q =  0.00000E+00 MeV  Emin = 1.00000E-11 MeV  frac = 1.00000E+00  : elastic scattering
-   2    MT =      5  Q =  0.00000E+00 MeV  Emin = 2.00000E+01 MeV  frac = 1.00000E+00  : anything
-   3    MT =     28  Q = -1.59570E+01 MeV  Emin = 1.72982E+01 MeV  frac = 1.00000E+00  : (n,np)
-   4    MT =     51  Q = -4.43900E+00 MeV  Emin = 4.81209E+00 MeV  frac = 1.00000E+00  : inelastic scatt. to 1. excited state
-   5    MT =     52  Q = -7.65300E+00 MeV  Emin = 8.29622E+00 MeV  frac = 1.00000E+00  : inelastic scatt. to 2. excited state
-   6    MT =     53  Q = -9.63800E+00 MeV  Emin = 1.04481E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 3. excited state
-   7    MT =     54  Q = -1.08000E+01 MeV  Emin = 1.17080E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 4. excited state
-   8    MT =     55  Q = -1.18000E+01 MeV  Emin = 1.27920E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 5. excited state
-   9    MT =     56  Q = -1.27000E+01 MeV  Emin = 1.37674E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 6. excited state
-  10    MT =     57  Q = -1.33500E+01 MeV  Emin = 1.45000E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 7. excited state
-  11    MT =     58  Q = -1.40800E+01 MeV  Emin = 1.52634E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 8. excited state
-  12    MT =     59  Q = -1.50800E+01 MeV  Emin = 1.63474E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 9. excited state
-  13    MT =     60  Q = -1.60800E+01 MeV  Emin = 1.74315E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 10. excited state
-  14    MT =     61  Q = -1.70800E+01 MeV  Emin = 1.85160E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 11. excited state
-  15    MT =     62  Q = -1.80800E+01 MeV  Emin = 1.96000E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 12. excited state
-  16    MT =     91  Q = -7.27500E+00 MeV  Emin = 7.88645E+00 MeV  frac = 1.00000E+00  : inelastic scattering to continuum
-  17    MT =    102  Q =  4.94700E+00 MeV  Emin = 1.00000E-11 MeV  frac = 1.00000E+00  : (n,gamma)
-  18    MT =    103  Q = -1.25880E+01 MeV  Emin = 1.44720E+01 MeV  frac = 1.00000E+00  : (n,p)
-  19    MT =    104  Q = -1.37330E+01 MeV  Emin = 1.52630E+01 MeV  frac = 1.00000E+00  : (n,d)
-  20    MT =    107  Q = -5.70200E+00 MeV  Emin = 6.18124E+00 MeV  frac = 1.00000E+00  : (n,alpha)
-
- 4 special reactions:
-
-   1    MT =    203  Q =  0.00000E+00 MeV  Emin = 1.44720E+01 MeV  : total proton production
-   2    MT =    204  Q =  0.00000E+00 MeV  Emin = 1.52630E+01 MeV  : total deuteron production
-   3    MT =    207  Q =  0.00000E+00 MeV  Emin = 6.18124E+00 MeV  : total alpha production
-   4    MT =      4  Q =  0.00000E+00 MeV  Emin = 4.81209E+00 MeV  : total inelastic scattering
-
- Nuclide    5 / 135 : 6000.09c -- natural carbon (C-nat)
-
- Pointers                     : 82196 4346
+ Pointers                     : 141796 4346
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 09c
@@ -569,9 +499,79 @@
    3    MT =    207  Q =  0.00000E+00 MeV  Emin = 6.18124E+00 MeV  : total alpha production
    4    MT =      4  Q =  0.00000E+00 MeV  Emin = 4.81209E+00 MeV  : total inelastic scattering
 
+ Nuclide    5 / 135 : 6000.12c -- natural carbon (C-nat)
+
+ Pointers                     : 487748 4392
+ Primary type                 : Transport
+ Nuclide ZAI                  : 60000
+ Library ID                   : 12c
+ Cross section data file      : /global/home/groups/co_nuclear/serpent/xsdata/endfb7/acedata/6000ENDF7.ace
+ Atomic weight (AW)           : 12.00110
+ Atomic weight ratio (AWR)    : 11.89800
+ Temperature                  : 1200.0 Kelvin
+ XS temperature               : 1200.0 Kelvin
+ Minimum and maximum energy   : 1.00000E-11 1.50000E+02
+ Half-life                    : N/A
+ Specific ingestion toxicity  : N/A
+ Specific inhalation toxicity : N/A
+
+ - Nuclide is not involved in burnup calculation
+ - Nuclide has neutron transport data
+ - Nuclide has no photon transport data
+ - Nuclide has no S(a,b) data
+ - Nuclide has no isomeric branching data
+ - Nuclide is not fissile
+ - Nuclide is not a delayed neutron precursor
+ - Nuclide has no delayed neutron data
+ - Nuclide has no ures ptable data
+ - Nuclide temperature is not adjusted with TMS
+ - Nuclide has no dosimetry data
+ - Nuclide has no decay data
+ - Nuclide has no supplementary transmutation cross section data
+ - Nuclide has no NFY data
+ - Nuclide has no SFY data
+
+ - 20 reaction channels
+ - 4 special reactions
+ - No transmutation reactions
+ - No transmutation branch reactions
+ - No decay reactions
+ - No decay branch reactions
+ - No transmutation paths
+
+ 20 reactions channel:
+
+   1    MT =      2  Q =  0.00000E+00 MeV  Emin = 1.00000E-11 MeV  frac = 1.00000E+00  : elastic scattering
+   2    MT =      5  Q =  0.00000E+00 MeV  Emin = 2.00000E+01 MeV  frac = 1.00000E+00  : anything
+   3    MT =     28  Q = -1.59570E+01 MeV  Emin = 1.72982E+01 MeV  frac = 1.00000E+00  : (n,np)
+   4    MT =     51  Q = -4.43900E+00 MeV  Emin = 4.81209E+00 MeV  frac = 1.00000E+00  : inelastic scatt. to 1. excited state
+   5    MT =     52  Q = -7.65300E+00 MeV  Emin = 8.29622E+00 MeV  frac = 1.00000E+00  : inelastic scatt. to 2. excited state
+   6    MT =     53  Q = -9.63800E+00 MeV  Emin = 1.04481E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 3. excited state
+   7    MT =     54  Q = -1.08000E+01 MeV  Emin = 1.17080E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 4. excited state
+   8    MT =     55  Q = -1.18000E+01 MeV  Emin = 1.27920E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 5. excited state
+   9    MT =     56  Q = -1.27000E+01 MeV  Emin = 1.37674E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 6. excited state
+  10    MT =     57  Q = -1.33500E+01 MeV  Emin = 1.45000E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 7. excited state
+  11    MT =     58  Q = -1.40800E+01 MeV  Emin = 1.52634E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 8. excited state
+  12    MT =     59  Q = -1.50800E+01 MeV  Emin = 1.63474E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 9. excited state
+  13    MT =     60  Q = -1.60800E+01 MeV  Emin = 1.74315E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 10. excited state
+  14    MT =     61  Q = -1.70800E+01 MeV  Emin = 1.85160E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 11. excited state
+  15    MT =     62  Q = -1.80800E+01 MeV  Emin = 1.96000E+01 MeV  frac = 1.00000E+00  : inelastic scatt. to 12. excited state
+  16    MT =     91  Q = -7.27500E+00 MeV  Emin = 7.88645E+00 MeV  frac = 1.00000E+00  : inelastic scattering to continuum
+  17    MT =    102  Q =  4.94700E+00 MeV  Emin = 1.00000E-11 MeV  frac = 1.00000E+00  : (n,gamma)
+  18    MT =    103  Q = -1.25880E+01 MeV  Emin = 1.44720E+01 MeV  frac = 1.00000E+00  : (n,p)
+  19    MT =    104  Q = -1.37330E+01 MeV  Emin = 1.52630E+01 MeV  frac = 1.00000E+00  : (n,d)
+  20    MT =    107  Q = -5.70200E+00 MeV  Emin = 6.18124E+00 MeV  frac = 1.00000E+00  : (n,alpha)
+
+ 4 special reactions:
+
+   1    MT =    203  Q =  0.00000E+00 MeV  Emin = 1.44720E+01 MeV  : total proton production
+   2    MT =    204  Q =  0.00000E+00 MeV  Emin = 1.52630E+01 MeV  : total deuteron production
+   3    MT =    207  Q =  0.00000E+00 MeV  Emin = 6.18124E+00 MeV  : total alpha production
+   4    MT =      4  Q =  0.00000E+00 MeV  Emin = 4.81209E+00 MeV  : total inelastic scattering
+
  Nuclide    6 / 135 : 6000.12s -- natural carbon (C-nat)
 
- Pointers                     : 428405 4392
+ Pointers                     : 505023 4392
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 12s
@@ -644,7 +644,7 @@
 
  Nuclide    7 / 135 : 6000.12s -- natural carbon (C-nat)
 
- Pointers                     : 430414 4392
+ Pointers                     : 507032 4392
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 12s
@@ -717,7 +717,7 @@
 
  Nuclide    8 / 135 : 6000.12s -- natural carbon (C-nat)
 
- Pointers                     : 432423 4392
+ Pointers                     : 509041 4392
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 12s
@@ -790,7 +790,7 @@
 
  Nuclide    9 / 135 : 8016.09c -- oxygen 16 (O-16)
 
- Pointers                     : 154175 5450
+ Pointers                     : 213775 5450
  Primary type                 : Transport
  Nuclide ZAI                  : 80160
  Library ID                   : 09c
@@ -905,7 +905,7 @@
 
  Nuclide   10 / 135 : 9019.12c -- fluorine 19 (F-19)
 
- Pointers                     : 38207 6048
+ Pointers                     : 502027 6048
  Primary type                 : Transport
  Nuclide ZAI                  : 90190
  Library ID                   : 12c
@@ -987,7 +987,7 @@
 
  Nuclide   11 / 135 : 14028.12c -- silicon 28 (Si-28)
 
- Pointers                     : 25791 8532
+ Pointers                     : 489611 8532
  Primary type                 : Transport
  Nuclide ZAI                  : 140280
  Library ID                   : 12c
@@ -1097,7 +1097,7 @@
 
  Nuclide   12 / 135 : 35081.09c -- bromine 81 (Br-81)
 
- Pointers                     : 342185 30566
+ Pointers                     : 401785 30566
  Primary type                 : Transport
  Nuclide ZAI                  : 350810
  Library ID                   : 09c
@@ -1191,7 +1191,7 @@
 
  Nuclide   13 / 135 : 36083.09c -- krypton 83 (Kr-83)
 
- Pointers                     : 345600 31670
+ Pointers                     : 405200 31670
  Primary type                 : Transport
  Nuclide ZAI                  : 360830
  Library ID                   : 09c
@@ -1271,7 +1271,7 @@
 
  Nuclide   14 / 135 : 36084.09c -- krypton 84 (Kr-84)
 
- Pointers                     : 348193 31946
+ Pointers                     : 407793 31946
  Primary type                 : Transport
  Nuclide ZAI                  : 360840
  Library ID                   : 09c
@@ -1353,7 +1353,7 @@
 
  Nuclide   15 / 135 : 36086.09c -- krypton 86 (Kr-86)
 
- Pointers                     : 350732 32498
+ Pointers                     : 410332 32498
  Primary type                 : Transport
  Nuclide ZAI                  : 360860
  Library ID                   : 09c
@@ -1425,7 +1425,7 @@
 
  Nuclide   16 / 135 : 37085.09c -- rubidium 85 (Rb-85)
 
- Pointers                     : 279147 32774
+ Pointers                     : 338747 32774
  Primary type                 : Transport
  Nuclide ZAI                  : 370850
  Library ID                   : 09c
@@ -1502,7 +1502,7 @@
 
  Nuclide   17 / 135 : 37087.09c -- rubidium 87 (Rb-87)
 
- Pointers                     : 277284 33326
+ Pointers                     : 336884 33326
  Primary type                 : Transport
  Nuclide ZAI                  : 370870
  Library ID                   : 09c
@@ -1572,7 +1572,7 @@
 
  Nuclide   18 / 135 : 38088.09c -- strontium 88 (Sr-88)
 
- Pointers                     : 330426 34430
+ Pointers                     : 390026 34430
  Primary type                 : Transport
  Nuclide ZAI                  : 380880
  Library ID                   : 09c
@@ -1658,7 +1658,7 @@
 
  Nuclide   19 / 135 : 38089.09c -- strontium 89 (Sr-89)
 
- Pointers                     : 333457 34706
+ Pointers                     : 393057 34706
  Primary type                 : Transport
  Nuclide ZAI                  : 380890
  Library ID                   : 09c
@@ -1739,7 +1739,7 @@
 
  Nuclide   20 / 135 : 38090.09c -- strontium 90 (Sr-90)
 
- Pointers                     : 282619 34982
+ Pointers                     : 342219 34982
  Primary type                 : Transport
  Nuclide ZAI                  : 380900
  Library ID                   : 09c
@@ -1807,7 +1807,7 @@
 
  Nuclide   21 / 135 : 39089.09c -- yttrium 89 (Y-89)
 
- Pointers                     : 404573 35258
+ Pointers                     : 464173 35258
  Primary type                 : Transport
  Nuclide ZAI                  : 390890
  Library ID                   : 09c
@@ -1886,7 +1886,7 @@
 
  Nuclide   22 / 135 : 39091.09c -- yttrium 91 (Y-91)
 
- Pointers                     : 229610 35810
+ Pointers                     : 289210 35810
  Primary type                 : Transport
  Nuclide ZAI                  : 390910
  Library ID                   : 09c
@@ -1979,7 +1979,7 @@
 
  Nuclide   23 / 135 : 40091.09c -- zirconium 91 (Zr-91)
 
- Pointers                     : 63115 36638
+ Pointers                     : 122715 36638
  Primary type                 : Transport
  Nuclide ZAI                  : 400910
  Library ID                   : 09c
@@ -2058,7 +2058,7 @@
 
  Nuclide   24 / 135 : 40092.09c -- zirconium 92 (Zr-92)
 
- Pointers                     : 58294 36914
+ Pointers                     : 117894 36914
  Primary type                 : Transport
  Nuclide ZAI                  : 400920
  Library ID                   : 09c
@@ -2139,7 +2139,7 @@
 
  Nuclide   25 / 135 : 40093.09c -- zirconium 93 (Zr-93)
 
- Pointers                     : 60960 37190
+ Pointers                     : 120560 37190
  Primary type                 : Transport
  Nuclide ZAI                  : 400930
  Library ID                   : 09c
@@ -2213,7 +2213,7 @@
 
  Nuclide   26 / 135 : 40094.09c -- zirconium 94 (Zr-94)
 
- Pointers                     : 67425 37466
+ Pointers                     : 127025 37466
  Primary type                 : Transport
  Nuclide ZAI                  : 400940
  Library ID                   : 09c
@@ -2290,7 +2290,7 @@
 
  Nuclide   27 / 135 : 40095.09c -- zirconium 95 (Zr-95)
 
- Pointers                     : 69799 37742
+ Pointers                     : 129399 37742
  Primary type                 : Transport
  Nuclide ZAI                  : 400950
  Library ID                   : 09c
@@ -2376,7 +2376,7 @@
 
  Nuclide   28 / 135 : 40096.09c -- zirconium 96 (Zr-96)
 
- Pointers                     : 65635 38018
+ Pointers                     : 125235 38018
  Primary type                 : Transport
  Nuclide ZAI                  : 400960
  Library ID                   : 09c
@@ -2445,7 +2445,7 @@
 
  Nuclide   29 / 135 : 42095.09c -- molybdenum 95 (Mo-95)
 
- Pointers                     : 363202 39950
+ Pointers                     : 422802 39950
  Primary type                 : Transport
  Nuclide ZAI                  : 420950
  Library ID                   : 09c
@@ -2574,7 +2574,7 @@
 
  Nuclide   30 / 135 : 42097.09c -- molybdenum 97 (Mo-97)
 
- Pointers                     : 369372 40502
+ Pointers                     : 428972 40502
  Primary type                 : Transport
  Nuclide ZAI                  : 420970
  Library ID                   : 09c
@@ -2651,7 +2651,7 @@
 
  Nuclide   31 / 135 : 42098.09c -- molybdenum 98 (Mo-98)
 
- Pointers                     : 371746 40778
+ Pointers                     : 431346 40778
  Primary type                 : Transport
  Nuclide ZAI                  : 420980
  Library ID                   : 09c
@@ -2727,7 +2727,7 @@
 
  Nuclide   32 / 135 : 42099.09c -- molybdenum 99 (Mo-99)
 
- Pointers                     : 374047 41054
+ Pointers                     : 433647 41054
  Primary type                 : Transport
  Nuclide ZAI                  : 420990
  Library ID                   : 09c
@@ -2807,7 +2807,7 @@
 
  Nuclide   33 / 135 : 42100.09c -- molybdenum 100 (Mo-100)
 
- Pointers                     : 193016 41330
+ Pointers                     : 252616 41330
  Primary type                 : Transport
  Nuclide ZAI                  : 421000
  Library ID                   : 09c
@@ -2876,7 +2876,7 @@
 
  Nuclide   34 / 135 : 43099.09c -- technetium 99 (Tc-99)
 
- Pointers                     : 337475 41606
+ Pointers                     : 397075 41606
  Primary type                 : Transport
  Nuclide ZAI                  : 430990
  Library ID                   : 09c
@@ -2985,7 +2985,7 @@
 
  Nuclide   35 / 135 : 44101.09c -- ruthenium 101 (Ru-101)
 
- Pointers                     : 241407 42986
+ Pointers                     : 301007 42986
  Primary type                 : Transport
  Nuclide ZAI                  : 441010
  Library ID                   : 09c
@@ -3146,7 +3146,7 @@
 
  Nuclide   36 / 135 : 44102.09c -- ruthenium 102 (Ru-102)
 
- Pointers                     : 249913 43262
+ Pointers                     : 309513 43262
  Primary type                 : Transport
  Nuclide ZAI                  : 441020
  Library ID                   : 09c
@@ -3216,7 +3216,7 @@
 
  Nuclide   37 / 135 : 44103.09c -- ruthenium 103 (Ru-103)
 
- Pointers                     : 251776 43538
+ Pointers                     : 311376 43538
  Primary type                 : Transport
  Nuclide ZAI                  : 441030
  Library ID                   : 09c
@@ -3300,7 +3300,7 @@
 
  Nuclide   38 / 135 : 44104.09c -- ruthenium 104 (Ru-104)
 
- Pointers                     : 233152 43814
+ Pointers                     : 292752 43814
  Primary type                 : Transport
  Nuclide ZAI                  : 441040
  Library ID                   : 09c
@@ -3367,7 +3367,7 @@
 
  Nuclide   39 / 135 : 44105.09c -- ruthenium 105 (Ru-105)
 
- Pointers                     : 234796 44090
+ Pointers                     : 294396 44090
  Primary type                 : Transport
  Nuclide ZAI                  : 441050
  Library ID                   : 09c
@@ -3435,7 +3435,7 @@
 
  Nuclide   40 / 135 : 44106.09c -- ruthenium 106 (Ru-106)
 
- Pointers                     : 236513 44366
+ Pointers                     : 296113 44366
  Primary type                 : Transport
  Nuclide ZAI                  : 441060
  Library ID                   : 09c
@@ -3501,7 +3501,7 @@
 
  Nuclide   41 / 135 : 45103.09c -- rhodium 103 (Rh-103)
 
- Pointers                     : 202439 44642
+ Pointers                     : 262039 44642
  Primary type                 : Transport
  Nuclide ZAI                  : 451030
  Library ID                   : 09c
@@ -3641,7 +3641,7 @@
 
  Nuclide   42 / 135 : 45105.09c -- rhodium 105 (Rh-105)
 
- Pointers                     : 131492 44918
+ Pointers                     : 191092 44918
  Primary type                 : Transport
  Nuclide ZAI                  : 451050
  Library ID                   : 09c
@@ -3716,7 +3716,7 @@
 
  Nuclide   43 / 135 : 46104.09c -- palladium 104 (Pd-104)
 
- Pointers                     : 217705 45470
+ Pointers                     : 277305 45470
  Primary type                 : Transport
  Nuclide ZAI                  : 461040
  Library ID                   : 09c
@@ -3859,7 +3859,7 @@
 
  Nuclide   44 / 135 : 46105.09c -- palladium 105 (Pd-105)
 
- Pointers                     : 84059 45746
+ Pointers                     : 143659 45746
  Primary type                 : Transport
  Nuclide ZAI                  : 461050
  Library ID                   : 09c
@@ -3983,7 +3983,7 @@
 
  Nuclide   45 / 135 : 46106.09c -- palladium 106 (Pd-106)
 
- Pointers                     : 72830 46022
+ Pointers                     : 132430 46022
  Primary type                 : Transport
  Nuclide ZAI                  : 461060
  Library ID                   : 09c
@@ -4120,7 +4120,7 @@
 
  Nuclide   46 / 135 : 46107.09c -- palladium 107 (Pd-107)
 
- Pointers                     : 79384 46298
+ Pointers                     : 138984 46298
  Primary type                 : Transport
  Nuclide ZAI                  : 461070
  Library ID                   : 09c
@@ -4203,7 +4203,7 @@
 
  Nuclide   47 / 135 : 46108.09c -- palladium 108 (Pd-108)
 
- Pointers                     : 93444 46574
+ Pointers                     : 153044 46574
  Primary type                 : Transport
  Nuclide ZAI                  : 461080
  Library ID                   : 09c
@@ -4325,7 +4325,7 @@
 
  Nuclide   48 / 135 : 46110.09c -- palladium 110 (Pd-110)
 
- Pointers                     : 284336 46850
+ Pointers                     : 343936 46850
  Primary type                 : Transport
  Nuclide ZAI                  : 461100
  Library ID                   : 09c
@@ -4444,7 +4444,7 @@
 
  Nuclide   49 / 135 : 47109.09c -- silver 109 (Ag-109)
 
- Pointers                     : 358108 47678
+ Pointers                     : 417708 47678
  Primary type                 : Transport
  Nuclide ZAI                  : 471090
  Library ID                   : 09c
@@ -4561,7 +4561,7 @@
 
  Nuclide   50 / 135 : 48110.09c -- cadmium 110 (Cd-110)
 
- Pointers                     : 47922 49334
+ Pointers                     : 107522 49334
  Primary type                 : Transport
  Nuclide ZAI                  : 481100
  Library ID                   : 09c
@@ -4645,7 +4645,7 @@
 
  Nuclide   51 / 135 : 48111.09c -- cadmium 111 (Cd-111)
 
- Pointers                     : 45767 49610
+ Pointers                     : 105367 49610
  Primary type                 : Transport
  Nuclide ZAI                  : 481110
  Library ID                   : 09c
@@ -4719,7 +4719,7 @@
 
  Nuclide   52 / 135 : 48113.09c -- cadmium 113 (Cd-113)
 
- Pointers                     : 42955 50162
+ Pointers                     : 102555 50162
  Primary type                 : Transport
  Nuclide ZAI                  : 481130
  Library ID                   : 09c
@@ -4802,7 +4802,7 @@
 
  Nuclide   53 / 135 : 48114.09c -- cadmium 114 (Cd-114)
 
- Pointers                     : 50607 50438
+ Pointers                     : 110207 50438
  Primary type                 : Transport
  Nuclide ZAI                  : 481140
  Library ID                   : 09c
@@ -4882,7 +4882,7 @@
 
  Nuclide   54 / 135 : 49115.09c -- indium 115 (In-115)
 
- Pointers                     : 190642 51818
+ Pointers                     : 250242 51818
  Primary type                 : Transport
  Nuclide ZAI                  : 491150
  Library ID                   : 09c
@@ -4959,7 +4959,7 @@
 
  Nuclide   55 / 135 : 53127.09c -- iodine 127 (I-127)
 
- Pointers                     : 316766 60926
+ Pointers                     : 376366 60926
  Primary type                 : Transport
  Nuclide ZAI                  : 531270
  Library ID                   : 09c
@@ -5066,7 +5066,7 @@
 
  Nuclide   56 / 135 : 53129.09c -- iodine 129 (I-129)
 
- Pointers                     : 327595 61202
+ Pointers                     : 387195 61202
  Primary type                 : Transport
  Nuclide ZAI                  : 531290
  Library ID                   : 09c
@@ -5152,7 +5152,7 @@
 
  Nuclide   57 / 135 : 54131.09c -- xenon 131 (Xe-131)
 
- Pointers                     : 167048 63962
+ Pointers                     : 226648 63962
  Primary type                 : Transport
  Nuclide ZAI                  : 541310
  Library ID                   : 09c
@@ -5259,7 +5259,7 @@
 
  Nuclide   58 / 135 : 54132.09c -- xenon 132 (Xe-132)
 
- Pointers                     : 171612 64238
+ Pointers                     : 231212 64238
  Primary type                 : Transport
  Nuclide ZAI                  : 541320
  Library ID                   : 09c
@@ -5342,7 +5342,7 @@
 
  Nuclide   59 / 135 : 54134.09c -- xenon 134 (Xe-134)
 
- Pointers                     : 159323 64790
+ Pointers                     : 218923 64790
  Primary type                 : Transport
  Nuclide ZAI                  : 541340
  Library ID                   : 09c
@@ -5427,7 +5427,7 @@
 
  Nuclide   60 / 135 : 54135.09c -- xenon 135 (Xe-135)
 
- Pointers                     : 162081 65066
+ Pointers                     : 221681 65066
  Primary type                 : Transport
  Nuclide ZAI                  : 541350
  Library ID                   : 09c
@@ -5506,7 +5506,7 @@
 
  Nuclide   61 / 135 : 54136.09c -- xenon 136 (Xe-136)
 
- Pointers                     : 164601 65342
+ Pointers                     : 224201 65342
  Primary type                 : Transport
  Nuclide ZAI                  : 541360
  Library ID                   : 09c
@@ -5584,7 +5584,7 @@
 
  Nuclide   62 / 135 : 55133.09c -- cesium 133 (Cs-133)
 
- Pointers                     : 186643 65618
+ Pointers                     : 246243 65618
  Primary type                 : Transport
  Nuclide ZAI                  : 551330
  Library ID                   : 09c
@@ -5686,7 +5686,7 @@
 
  Nuclide   63 / 135 : 55134.09c -- cesium 134 (Cs-134)
 
- Pointers                     : 182863 65894
+ Pointers                     : 242463 65894
  Primary type                 : Transport
  Nuclide ZAI                  : 551340
  Library ID                   : 09c
@@ -5785,7 +5785,7 @@
 
  Nuclide   64 / 135 : 55135.09c -- cesium 135 (Cs-135)
 
- Pointers                     : 423089 66170
+ Pointers                     : 482689 66170
  Primary type                 : Transport
  Nuclide ZAI                  : 551350
  Library ID                   : 09c
@@ -5857,7 +5857,7 @@
 
  Nuclide   65 / 135 : 55137.09c -- cesium 137 (Cs-137)
 
- Pointers                     : 178096 66722
+ Pointers                     : 237696 66722
  Primary type                 : Transport
  Nuclide ZAI                  : 551370
  Library ID                   : 09c
@@ -5932,7 +5932,7 @@
 
  Nuclide   66 / 135 : 56138.09c -- barium 138 (Ba-138)
 
- Pointers                     : 200795 68930
+ Pointers                     : 260395 68930
  Primary type                 : Transport
  Nuclide ZAI                  : 561380
  Library ID                   : 09c
@@ -5999,7 +5999,7 @@
 
  Nuclide   67 / 135 : 56140.09c -- barium 140 (Ba-140)
 
- Pointers                     : 336123 69206
+ Pointers                     : 395723 69206
  Primary type                 : Transport
  Nuclide ZAI                  : 561400
  Library ID                   : 09c
@@ -6062,7 +6062,7 @@
 
  Nuclide   68 / 135 : 57139.09c -- lanthanum 139 (La-139)
 
- Pointers                     : 406893 69758
+ Pointers                     : 466493 69758
  Primary type                 : Transport
  Nuclide ZAI                  : 571390
  Library ID                   : 09c
@@ -6137,7 +6137,7 @@
 
  Nuclide   69 / 135 : 58141.09c -- cerium 141 (Ce-141)
 
- Pointers                     : 129045 71414
+ Pointers                     : 188645 71414
  Primary type                 : Transport
  Nuclide ZAI                  : 581410
  Library ID                   : 09c
@@ -6215,7 +6215,7 @@
 
  Nuclide   70 / 135 : 58142.09c -- cerium 142 (Ce-142)
 
- Pointers                     : 137938 71690
+ Pointers                     : 197538 71690
  Primary type                 : Transport
  Nuclide ZAI                  : 581420
  Library ID                   : 09c
@@ -6288,7 +6288,7 @@
 
  Nuclide   71 / 135 : 58143.09c -- cerium 143 (Ce-143)
 
- Pointers                     : 133520 71966
+ Pointers                     : 193120 71966
  Primary type                 : Transport
  Nuclide ZAI                  : 581430
  Library ID                   : 09c
@@ -6393,7 +6393,7 @@
 
  Nuclide   72 / 135 : 59141.09c -- praseodymium 141 (Pr-141)
 
- Pointers                     : 142413 72518
+ Pointers                     : 202013 72518
  Primary type                 : Transport
  Nuclide ZAI                  : 591410
  Library ID                   : 09c
@@ -6494,7 +6494,7 @@
 
  Nuclide   73 / 135 : 59143.09c -- praseodymium 143 (Pr-143)
 
- Pointers                     : 140020 73070
+ Pointers                     : 199620 73070
  Primary type                 : Transport
  Nuclide ZAI                  : 591430
  Library ID                   : 09c
@@ -6574,7 +6574,7 @@
 
  Nuclide   74 / 135 : 60143.09c -- neodymium 143 (Nd-143)
 
- Pointers                     : 424898 73622
+ Pointers                     : 484498 73622
  Primary type                 : Transport
  Nuclide ZAI                  : 601430
  Library ID                   : 09c
@@ -6663,7 +6663,7 @@
 
  Nuclide   75 / 135 : 60144.09c -- neodymium 144 (Nd-144)
 
- Pointers                     : 412828 73898
+ Pointers                     : 472428 73898
  Primary type                 : Transport
  Nuclide ZAI                  : 601440
  Library ID                   : 09c
@@ -6776,7 +6776,7 @@
 
  Nuclide   76 / 135 : 60145.09c -- neodymium 145 (Nd-145)
 
- Pointers                     : 301097 74174
+ Pointers                     : 360697 74174
  Primary type                 : Transport
  Nuclide ZAI                  : 601450
  Library ID                   : 09c
@@ -6877,7 +6877,7 @@
 
  Nuclide   77 / 135 : 60146.09c -- neodymium 146 (Nd-146)
 
- Pointers                     : 289576 74450
+ Pointers                     : 349176 74450
  Primary type                 : Transport
  Nuclide ZAI                  : 601460
  Library ID                   : 09c
@@ -6979,7 +6979,7 @@
 
  Nuclide   78 / 135 : 60147.09c -- neodymium 147 (Nd-147)
 
- Pointers                     : 293775 74726
+ Pointers                     : 353375 74726
  Primary type                 : Transport
  Nuclide ZAI                  : 601470
  Library ID                   : 09c
@@ -7100,7 +7100,7 @@
 
  Nuclide   79 / 135 : 60148.09c -- neodymium 148 (Nd-148)
 
- Pointers                     : 311580 75002
+ Pointers                     : 371180 75002
  Primary type                 : Transport
  Nuclide ZAI                  : 601480
  Library ID                   : 09c
@@ -7192,7 +7192,7 @@
 
  Nuclide   80 / 135 : 60150.09c -- neodymium 150 (Nd-150)
 
- Pointers                     : 273815 75278
+ Pointers                     : 333415 75278
  Primary type                 : Transport
  Nuclide ZAI                  : 601500
  Library ID                   : 09c
@@ -7284,7 +7284,7 @@
 
  Nuclide   81 / 135 : 61147.09c -- promethium 147 (Pm-147)
 
- Pointers                     : 321330 75554
+ Pointers                     : 380930 75554
  Primary type                 : Transport
  Nuclide ZAI                  : 611470
  Library ID                   : 09c
@@ -7360,7 +7360,7 @@
 
  Nuclide   82 / 135 : 61148.09c -- promethium 148 (Pm-148)
 
- Pointers                     : 325878 75830
+ Pointers                     : 385478 75830
  Primary type                 : Transport
  Nuclide ZAI                  : 611480
  Library ID                   : 09c
@@ -7428,7 +7428,7 @@
 
  Nuclide   83 / 135 : 61149.09c -- promethium 149 (Pm-149)
 
- Pointers                     : 323431 76106
+ Pointers                     : 383031 76106
  Primary type                 : Transport
  Nuclide ZAI                  : 611490
  Library ID                   : 09c
@@ -7506,7 +7506,7 @@
 
  Nuclide   84 / 135 : 62147.09c -- samarium 147 (Sm-147)
 
- Pointers                     : 53000 77486
+ Pointers                     : 112600 77486
  Primary type                 : Transport
  Nuclide ZAI                  : 621470
  Library ID                   : 09c
@@ -7623,7 +7623,7 @@
 
  Nuclide   85 / 135 : 62149.09c -- samarium 149 (Sm-149)
 
- Pointers                     : 352741 78038
+ Pointers                     : 412341 78038
  Primary type                 : Transport
  Nuclide ZAI                  : 621490
  Library ID                   : 09c
@@ -7741,7 +7741,7 @@
 
  Nuclide   86 / 135 : 62150.09c -- samarium 150 (Sm-150)
 
- Pointers                     : 399352 78314
+ Pointers                     : 458952 78314
  Primary type                 : Transport
  Nuclide ZAI                  : 621500
  Library ID                   : 09c
@@ -7857,7 +7857,7 @@
 
  Nuclide   87 / 135 : 62151.09c -- samarium 151 (Sm-151)
 
- Pointers                     : 394715 78590
+ Pointers                     : 454315 78590
  Primary type                 : Transport
  Nuclide ZAI                  : 621510
  Library ID                   : 09c
@@ -7965,7 +7965,7 @@
 
  Nuclide   88 / 135 : 62152.09c -- samarium 152 (Sm-152)
 
- Pointers                     : 388691 78866
+ Pointers                     : 448291 78866
  Primary type                 : Transport
  Nuclide ZAI                  : 621520
  Library ID                   : 09c
@@ -8092,7 +8092,7 @@
 
  Nuclide   89 / 135 : 62153.09c -- samarium 153 (Sm-153)
 
- Pointers                     : 385149 79142
+ Pointers                     : 444749 79142
  Primary type                 : Transport
  Nuclide ZAI                  : 621530
  Library ID                   : 09c
@@ -8185,7 +8185,7 @@
 
  Nuclide   90 / 135 : 62154.09c -- samarium 154 (Sm-154)
 
- Pointers                     : 380950 79418
+ Pointers                     : 440550 79418
  Primary type                 : Transport
  Nuclide ZAI                  : 621540
  Library ID                   : 09c
@@ -8287,7 +8287,7 @@
 
  Nuclide   91 / 135 : 63153.09c -- europium 153 (Eu-153)
 
- Pointers                     : 98903 80522
+ Pointers                     : 158503 80522
  Primary type                 : Transport
  Nuclide ZAI                  : 631530
  Library ID                   : 09c
@@ -8385,7 +8385,7 @@
 
  Nuclide   92 / 135 : 63154.09c -- europium 154 (Eu-154)
 
- Pointers                     : 89864 80798
+ Pointers                     : 149464 80798
  Primary type                 : Transport
  Nuclide ZAI                  : 631540
  Library ID                   : 09c
@@ -8454,7 +8454,7 @@
 
  Nuclide   93 / 135 : 63155.09c -- europium 155 (Eu-155)
 
- Pointers                     : 91654 81074
+ Pointers                     : 151254 81074
  Primary type                 : Transport
  Nuclide ZAI                  : 631550
  Library ID                   : 09c
@@ -8523,7 +8523,7 @@
 
  Nuclide   94 / 135 : 63156.09c -- europium 156 (Eu-156)
 
- Pointers                     : 268556 81350
+ Pointers                     : 328156 81350
  Primary type                 : Transport
  Nuclide ZAI                  : 631560
  Library ID                   : 09c
@@ -8592,7 +8592,7 @@
 
  Nuclide   95 / 135 : 64155.09c -- gadolinium 155 (Gd-155)
 
- Pointers                     : 102610 83006
+ Pointers                     : 162210 83006
  Primary type                 : Transport
  Nuclide ZAI                  : 641550
  Library ID                   : 09c
@@ -8703,7 +8703,7 @@
 
  Nuclide   96 / 135 : 64156.09c -- gadolinium 156 (Gd-156)
 
- Pointers                     : 116302 83282
+ Pointers                     : 175902 83282
  Primary type                 : Transport
  Nuclide ZAI                  : 641560
  Library ID                   : 09c
@@ -8854,7 +8854,7 @@
 
  Nuclide   97 / 135 : 64157.09c -- gadolinium 157 (Gd-157)
 
- Pointers                     : 109621 83558
+ Pointers                     : 169221 83558
  Primary type                 : Transport
  Nuclide ZAI                  : 641570
  Library ID                   : 09c
@@ -8990,7 +8990,7 @@
 
  Nuclide   98 / 135 : 64158.09c -- gadolinium 158 (Gd-158)
 
- Pointers                     : 124078 83834
+ Pointers                     : 183678 83834
  Primary type                 : Transport
  Nuclide ZAI                  : 641580
  Library ID                   : 09c
@@ -9088,7 +9088,7 @@
 
  Nuclide   99 / 135 : 90232.09c -- thorium 232 (Th-232)
 
- Pointers                     : 196523 103476
+ Pointers                     : 256123 103476
  Primary type                 : Transport
  Nuclide ZAI                  : 902320
  Library ID                   : 09c
@@ -9192,7 +9192,7 @@
 
  Nuclide  100 / 135 : 90233.09c -- thorium 233 (Th-233)
 
- Pointers                     : 194806 103752
+ Pointers                     : 254406 103752
  Primary type                 : Transport
  Nuclide ZAI                  : 902330
  Library ID                   : 09c
@@ -9261,7 +9261,7 @@
 
  Nuclide  101 / 135 : 91233.09c -- protactinium 233 (Pa-233)
 
- Pointers                     : 214582 104856
+ Pointers                     : 274182 104856
  Primary type                 : Transport
  Nuclide ZAI                  : 912330
  Library ID                   : 09c
@@ -9352,7 +9352,7 @@
 
  Nuclide  102 / 135 : 92233.09c -- uranium 233 (U-233)
 
- Pointers                     : 270346 105408
+ Pointers                     : 329946 105408
  Primary type                 : Transport
  Nuclide ZAI                  : 922330
  Library ID                   : 09c
@@ -9445,7 +9445,7 @@
 
  Nuclide  103 / 135 : 92234.09c -- uranium 234 (U-234)
 
- Pointers                     : 258276 105684
+ Pointers                     : 317876 105684
  Primary type                 : Transport
  Nuclide ZAI                  : 922340
  Library ID                   : 09c
@@ -9547,7 +9547,7 @@
 
  Nuclide  104 / 135 : 92235.09c -- uranium 235 (U-235)
 
- Pointers                     : 254661 105960
+ Pointers                     : 314261 105960
  Primary type                 : Transport
  Nuclide ZAI                  : 922350
  Library ID                   : 09c
@@ -9642,7 +9642,7 @@
 
  Nuclide  105 / 135 : 92236.09c -- uranium 236 (U-236)
 
- Pointers                     : 264722 106236
+ Pointers                     : 324322 106236
  Primary type                 : Transport
  Nuclide ZAI                  : 922360
  Library ID                   : 09c
@@ -9740,7 +9740,7 @@
 
  Nuclide  106 / 135 : 92237.09c -- uranium 237 (U-237)
 
- Pointers                     : 262202 106512
+ Pointers                     : 321802 106512
  Primary type                 : Transport
  Nuclide ZAI                  : 922370
  Library ID                   : 09c
@@ -9820,7 +9820,7 @@
 
  Nuclide  107 / 135 : 92238.09c -- uranium 238 (U-238)
 
- Pointers                     : 376640 106788
+ Pointers                     : 436240 106788
  Primary type                 : Transport
  Nuclide ZAI                  : 922380
  Library ID                   : 09c
@@ -9915,7 +9915,7 @@
 
  Nuclide  108 / 135 : 92239.09c -- uranium 239 (U-239)
 
- Pointers                     : 238084 107064
+ Pointers                     : 297684 107064
  Primary type                 : Transport
  Nuclide ZAI                  : 922390
  Library ID                   : 09c
@@ -10006,7 +10006,7 @@
 
  Nuclide  109 / 135 : 93236.09c -- neptunium 236 (Np-236)
 
- Pointers                     : 174224 108168
+ Pointers                     : 233824 108168
  Primary type                 : Transport
  Nuclide ZAI                  : 932360
  Library ID                   : 09c
@@ -10064,7 +10064,7 @@
 
  Nuclide  110 / 135 : 93237.09c -- neptunium 237 (Np-237)
 
- Pointers                     : 175138 108444
+ Pointers                     : 234738 108444
  Primary type                 : Transport
  Nuclide ZAI                  : 932370
  Library ID                   : 09c
@@ -10150,7 +10150,7 @@
 
  Nuclide  111 / 135 : 93238.09c -- neptunium 238 (Np-238)
 
- Pointers                     : 180124 108720
+ Pointers                     : 239724 108720
  Primary type                 : Transport
  Nuclide ZAI                  : 932380
  Library ID                   : 09c
@@ -10233,7 +10233,7 @@
 
  Nuclide  112 / 135 : 93239.09c -- neptunium 239 (Np-239)
 
- Pointers                     : 281321 108996
+ Pointers                     : 340921 108996
  Primary type                 : Transport
  Nuclide ZAI                  : 932390
  Library ID                   : 09c
@@ -10299,7 +10299,7 @@
 
  Nuclide  113 / 135 : 94236.09c -- plutonium 236 (Pu-236)
 
- Pointers                     : 153169 109272
+ Pointers                     : 212769 109272
  Primary type                 : Transport
  Nuclide ZAI                  : 942360
  Library ID                   : 09c
@@ -10361,7 +10361,7 @@
 
  Nuclide  114 / 135 : 94237.09c -- plutonium 237 (Pu-237)
 
- Pointers                     : 151744 109548
+ Pointers                     : 211344 109548
  Primary type                 : Transport
  Nuclide ZAI                  : 942370
  Library ID                   : 09c
@@ -10426,7 +10426,7 @@
 
  Nuclide  115 / 135 : 94238.09c -- plutonium 238 (Pu-238)
 
- Pointers                     : 149954 109824
+ Pointers                     : 209554 109824
  Primary type                 : Transport
  Nuclide ZAI                  : 942380
  Library ID                   : 09c
@@ -10496,7 +10496,7 @@
 
  Nuclide  116 / 135 : 94239.09c -- plutonium 239 (Pu-239)
 
- Pointers                     : 146339 110100
+ Pointers                     : 205939 110100
  Primary type                 : Transport
  Nuclide ZAI                  : 942390
  Library ID                   : 09c
@@ -10591,7 +10591,7 @@
 
  Nuclide  117 / 135 : 94240.09c -- plutonium 240 (Pu-240)
 
- Pointers                     : 107466 110376
+ Pointers                     : 167066 110376
  Primary type                 : Transport
  Nuclide ZAI                  : 942400
  Library ID                   : 09c
@@ -10666,7 +10666,7 @@
 
  Nuclide  118 / 135 : 94241.09c -- plutonium 241 (Pu-241)
 
- Pointers                     : 315049 110652
+ Pointers                     : 374649 110652
  Primary type                 : Transport
  Nuclide ZAI                  : 942410
  Library ID                   : 09c
@@ -10735,7 +10735,7 @@
 
  Nuclide  119 / 135 : 94242.09c -- plutonium 242 (Pu-242)
 
- Pointers                     : 308876 110928
+ Pointers                     : 368476 110928
  Primary type                 : Transport
  Nuclide ZAI                  : 942420
  Library ID                   : 09c
@@ -10808,7 +10808,7 @@
 
  Nuclide  120 / 135 : 94243.09c -- plutonium 243 (Pu-243)
 
- Pointers                     : 310885 111204
+ Pointers                     : 370485 111204
  Primary type                 : Transport
  Nuclide ZAI                  : 942430
  Library ID                   : 09c
@@ -10863,7 +10863,7 @@
 
  Nuclide  121 / 135 : 94244.09c -- plutonium 244 (Pu-244)
 
- Pointers                     : 307743 111480
+ Pointers                     : 367343 111480
  Primary type                 : Transport
  Nuclide ZAI                  : 942440
  Library ID                   : 09c
@@ -10924,7 +10924,7 @@
 
  Nuclide  122 / 135 : 95241.09c -- americium 241 (Am-241)
 
- Pointers                     : 409121 112032
+ Pointers                     : 468721 112032
  Primary type                 : Transport
  Nuclide ZAI                  : 952410
  Library ID                   : 09c
@@ -11023,7 +11023,7 @@
 
  Nuclide  123 / 135 : 95242.09c -- americium 242 (Am-242)
 
- Pointers                     : 420058 112308
+ Pointers                     : 479658 112308
  Primary type                 : Transport
  Nuclide ZAI                  : 952420
  Library ID                   : 09c
@@ -11110,7 +11110,7 @@
 
  Nuclide  124 / 135 : 95243.09c -- americium 243 (Am-243)
 
- Pointers                     : 299361 112584
+ Pointers                     : 358961 112584
  Primary type                 : Transport
  Nuclide ZAI                  : 952430
  Library ID                   : 09c
@@ -11182,7 +11182,7 @@
 
  Nuclide  125 / 135 : 95244.09c -- americium 244 (Am-244)
 
- Pointers                     : 305223 112860
+ Pointers                     : 364823 112860
  Primary type                 : Transport
  Nuclide ZAI                  : 952440
  Library ID                   : 09c
@@ -11262,7 +11262,7 @@
 
  Nuclide  126 / 135 : 96242.09c -- curium 242 (Cm-242)
 
- Pointers                     : 224897 114240
+ Pointers                     : 284497 114240
  Primary type                 : Transport
  Nuclide ZAI                  : 962420
  Library ID                   : 09c
@@ -11320,7 +11320,7 @@
 
  Nuclide  127 / 135 : 96243.09c -- curium 243 (Cm-243)
 
- Pointers                     : 225811 114516
+ Pointers                     : 285411 114516
  Primary type                 : Transport
  Nuclide ZAI                  : 962430
  Library ID                   : 09c
@@ -11400,7 +11400,7 @@
 
  Nuclide  128 / 135 : 96244.09c -- curium 244 (Cm-244)
 
- Pointers                     : 209212 114792
+ Pointers                     : 268812 114792
  Primary type                 : Transport
  Nuclide ZAI                  : 962440
  Library ID                   : 09c
@@ -11463,7 +11463,7 @@
 
  Nuclide  129 / 135 : 96245.09c -- curium 245 (Cm-245)
 
- Pointers                     : 210491 115068
+ Pointers                     : 270091 115068
  Primary type                 : Transport
  Nuclide ZAI                  : 962450
  Library ID                   : 09c
@@ -11534,7 +11534,7 @@
 
  Nuclide  130 / 135 : 96246.09c -- curium 246 (Cm-246)
 
- Pointers                     : 212354 115344
+ Pointers                     : 271954 115344
  Primary type                 : Transport
  Nuclide ZAI                  : 962460
  Library ID                   : 09c
@@ -11610,7 +11610,7 @@
 
  Nuclide  131 / 135 : 96247.09c -- curium 247 (Cm-247)
 
- Pointers                     : 127985 115620
+ Pointers                     : 187585 115620
  Primary type                 : Transport
  Nuclide ZAI                  : 962470
  Library ID                   : 09c
@@ -11670,7 +11670,7 @@
 
  Nuclide  132 / 135 : 96248.09c -- curium 248 (Cm-248)
 
- Pointers                     : 228331 115896
+ Pointers                     : 287931 115896
  Primary type                 : Transport
  Nuclide ZAI                  : 962480
  Library ID                   : 09c
@@ -11733,7 +11733,7 @@
 
  Nuclide  133 / 135 : 97249.09c -- berkelium 249 (Bk-249)
 
- Pointers                     : 417830 117000
+ Pointers                     : 477430 117000
  Primary type                 : Transport
  Nuclide ZAI                  : 972490
  Library ID                   : 09c
@@ -11809,7 +11809,7 @@
 
  Nuclide  134 / 135 : 98249.09c -- californium 249 (Cf-249)
 
- Pointers                     : 40946 117552
+ Pointers                     : 100541 117552
  Primary type                 : Transport
  Nuclide ZAI                  : 982490
  Library ID                   : 09c
@@ -11882,7 +11882,7 @@
 
  Nuclide  135 / 135 : 98250.09c -- californium 250 (Cf-250)
 
- Pointers                     : 380255 117828
+ Pointers                     : 439855 117828
  Primary type                 : Transport
  Nuclide ZAI                  : 982500
  Library ID                   : 09c
@@ -11937,8 +11937,2906 @@
 
  --- Table  1: Summary of material compositions: 
 
- 12 materials included in calculation
+ 138 materials included in calculation
 
+
+Material "Cf249":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.13613E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 98249.09c  249.07973  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cd113":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.87478E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 48113.09c  112.89987  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cd111":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.84163E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 48111.09c  110.90372  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cd110":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.82501E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 48110.09c  109.90313  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cd114":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.89144E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 48114.09c  113.90349  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Sm147":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.43962E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 62147.09c  146.91508  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Zr92":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.52614E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 40092.09c   91.90501  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Zr93":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.54277E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 40093.09c   92.90651  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Zr91":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.50955E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 40091.09c   90.90563  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Zr96":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.59262E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 40096.09c   95.90830  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Zr94":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.55938E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 40094.09c   93.90631  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Zr95":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.57601E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 40095.09c   94.90801  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pd106":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.75860E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 46106.09c  105.90346  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pd107":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.77523E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 46107.09c  106.90537  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "C0":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.99286E+01 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 1.62 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+  6000.09c   12.00110  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pd105":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.74202E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 46105.09c  104.90519  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Eu154":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.55598E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 63154.09c  153.92228  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Eu155":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.57256E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 63155.09c  154.92085  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pd108":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.79181E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 46108.09c  107.90385  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Eu153":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.53937E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 63153.09c  152.92168  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Gd155":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.57260E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 64155.09c  154.92287  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pu240":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.98626E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 94240.09c  240.05420  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Gd157":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.60583E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 64157.09c  156.92407  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Gd156":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.58920E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 64156.09c  155.92245  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Gd158":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.62243E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 64158.09c  157.92365  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cm247":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.10277E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 96247.09c  247.07046  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ce141":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.33991E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 58141.09c  140.91049  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Rh105":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.74195E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 45105.09c  104.90116  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ce143":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.37316E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 58143.09c  142.91269  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ce142":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.35649E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 58142.09c  141.90908  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pr143":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.37313E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 59143.09c  142.91068  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pr141":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.33986E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 59141.09c  140.90748  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pu239":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.96962E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 94239.09c  239.05218  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pu238":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.95297E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 94238.09c  238.04947  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pu237":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.93634E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 94237.09c  237.04836  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pu236":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.91970E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 94236.09c  236.04576  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "O16":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.65606E+01 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+  8016.09c   15.99492  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Xe134":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.22367E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 54134.09c  133.91036  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Xe135":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.24022E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 54135.09c  134.90692  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Xe136":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.25683E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 54136.09c  135.90752  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Xe131":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.17377E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 54131.09c  130.90555  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Xe132":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.19034E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 54132.09c  131.90312  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Np236":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.91971E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 93236.09c  236.04676  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Np237":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.93634E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 93237.09c  237.04816  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cs137":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.27343E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 55137.09c  136.90711  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Np238":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.95299E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 93238.09c  238.05098  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cs134":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.22362E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 55134.09c  133.90734  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cs133":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.20699E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 55133.09c  132.90574  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "In115":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.90806E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 49115.09c  114.90409  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Mo100":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.65903E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 42100.09c   99.90726  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Th233":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.86982E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 90233.09c  233.04195  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Th232":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.85315E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 90232.09c  232.03833  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ba138":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.29000E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 56138.09c  137.90467  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Rh103":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.70881E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 45103.09c  102.90501  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cm244":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.05282E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 96244.09c  244.06263  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cm245":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.06947E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 96245.09c  245.06525  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cm246":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.08610E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 96246.09c  246.06685  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pa233":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.86978E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.78 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 91233.09c  233.03993  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pd104":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.72539E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 46104.09c  103.90399  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cm242":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.01954E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 96242.09c  242.05841  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cm243":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.03619E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 96243.09c  243.06103  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cm248":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.11940E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 96248.09c  248.07207  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Y91":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.50958E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 39091.09c   90.90735  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ru104":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.72537E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 44104.09c  103.90258  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ru105":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.74212E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 44105.09c  104.91124  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ru106":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.75865E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 44106.09c  105.90680  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "U239":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.96965E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 92239.09c  239.05430  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ru101":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.67561E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 44101.09c  100.90584  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ru102":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.69221E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 44102.09c  101.90542  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ru103":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.70879E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 44103.09c  102.90400  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "U235":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.90306E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 92235.09c  235.04395  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "U234":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.88640E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 92234.09c  234.04093  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "U237":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.93635E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 92237.09c  237.04878  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "U236":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.91969E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 92236.09c  236.04556  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Eu156":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.58925E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 63156.09c  155.92548  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "U233":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.86978E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 92233.09c  233.03964  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Nd150":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.48954E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 60150.09c  149.92090  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Rb87":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.44318E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 37087.09c   86.90919  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Rb85":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.41002E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 37085.09c   84.91184  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Np239":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.96963E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 93239.09c  239.05258  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Sr90":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.49298E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 38090.09c   89.90765  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pd110":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.82505E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 46110.09c  109.90514  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Nd146":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.42299E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 60146.09c  145.91348  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Nd147":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.43964E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 60147.09c  146.91609  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Am243":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.03620E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 95243.09c  243.06143  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Nd145":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.40637E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 60145.09c  144.91288  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Am244":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.05285E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 95244.09c  244.06465  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pu244":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.05285E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 94244.09c  244.06465  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pu242":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.01954E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 94242.09c  242.05841  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pu243":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.03621E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 94243.09c  243.06203  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Nd148":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.45625E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 60148.09c  147.91668  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pu241":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.00277E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 94241.09c  241.04873  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "I127":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.10733E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 53127.09c  126.90448  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pm147":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.43962E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 61147.09c  146.91508  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pm149":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.47289E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 61149.09c  148.91830  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Pm148":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.45625E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 61148.09c  147.91668  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "I129":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.14056E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 53129.09c  128.90536  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Sr88":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.45972E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 38088.09c   87.90515  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Sr89":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.47637E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 38089.09c   88.90776  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ba140":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.32330E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 56140.09c  139.90989  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Tc99":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.64240E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 43099.09c   98.90626  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Br81":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.34367E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 35081.09c   80.91631  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Kr83":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.37685E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 36083.09c   82.91428  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Kr84":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.39341E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 36084.09c   83.91154  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Kr86":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.42660E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 36086.09c   85.91062  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Sm149":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.47287E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 62149.09c  148.91728  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Ag109":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.80843E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 47109.09c  108.90455  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Mo95":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.57597E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 42095.09c   94.90589  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Mo97":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.60919E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 42097.09c   96.90598  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Mo98":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.62578E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 42098.09c   97.90536  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Mo99":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.64243E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 42099.09c   98.90767  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "U238":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 3.95299E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 92238.09c  238.05078  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cf250":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.15268E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 98250.09c  250.07628  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Sm154":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.55598E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 62154.09c  153.92228  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Sm153":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.53937E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 62153.09c  152.92168  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Sm152":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.52273E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 62152.09c  151.92008  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Sm151":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.50612E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 62151.09c  150.91948  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Sm150":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.48947E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 62150.09c  149.91686  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Y89":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 1.47634E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 39089.09c   88.90575  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "La139":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.30658E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 57139.09c  138.90326  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Am241":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.00291E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 95241.09c  241.05680  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Nd144":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.38972E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 60144.09c  143.91026  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Bk249":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.13613E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 97249.09c  249.07973  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Am242":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 4.01956E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 3.77 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 95242.09c  242.05952  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Cs135":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.24020E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 55135.09c  134.90591  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
+
+Material "Nd143":
+
+ - Material is not included in majorant
+ - Material is not included in geometry
+ - Atom density 1.00000E+00 1/barn*cm
+ - Mass density 2.37311E+02 g/cm3
+ - Volume 0.00000E+00 cm3
+ - Mass 0.00000E+00 g
+ - Photon emission rate 0.00000E+00 1/s
+ - Neutron emission rate 0.00000E+00 1/s
+ - 1 nuclides in composition
+ - No nuclides associated with S(a,b) data
+ - 2.16 Mb of memory allocated for data
+
+Isotopic composition (non-zero densities):
+
+-------------------------------------------------------------------
+ Nuclide    a. weight   temp      a. dens      a. frac      m. frac
+-------------------------------------------------------------------
+ 60143.09c  142.90968  900.0  1.00000E+00  1.00000E+00  1.00000E+00    
+       sum                    1.00000E+00  1.00000E+00  1.00000E+00
+-------------------------------------------------------------------
 
 Material "matrix_mix":
 

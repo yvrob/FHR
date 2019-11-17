@@ -1,7 +1,8 @@
 set title "FHR full core model"
 % --- Cross section data library file path:
 set acelib "/global/home/groups/co_nuclear/serpent/xsdata/endfb7/sss_endfb7u.xsdata"
-
+include detectors
+include isotopes
 set egrid 1.E-03
 
 % --- Neutron population and criticality cycles:
