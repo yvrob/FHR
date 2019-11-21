@@ -25,7 +25,7 @@ pbed_file='fpb_pos_60'
 exec_file='co_execute.sub'
 
 list_parameters=['Tf','fuelmult','fpmult']
-parameter_values=[[900],[0.5,1,2],[0.5,1,2]]
+parameter_values=[[800,1000],[0.5,1,2],[0.5,1,2]]
 
 parameter_indexes=[]
 for i in range(len(parameter_values)):
@@ -51,7 +51,7 @@ for ind_case in range(len(list_cases)):
         message+=list_parameters[ind_parameter]+': '+str(case[ind_parameter])+' '
         new_folder+='_'+list_parameters[ind_parameter]+str(case[ind_parameter])
     new_folder+='/'
-    print(message+'-----------------------------------------------------------------\nModification of input files')
+    print(message+'\n-----------------------------------------------------------------\nModification of input files')
     copyDirectory(complete_default_path,new_folder)
     for ind_parameter in range(len(case)):        
         parameter=list_parameters[ind_parameter]
@@ -162,7 +162,9 @@ for ind_case in range(len(list_cases)):
             line = next(lines) 
             while True:
                 if '#SBATCH --job-name=default' in line:
-                    job_name=parameter+str(case[ind_parameter])
+                    job_name=parameter
+                    for i in range(len(list_parameters)):
+                        job_name+='_'+list_parameters[i]+str(case[i])
                     write_file.write('#SBATCH --job-name={}'.format(job_name))
                     print('\tChanged job name to {}'.format(job_name))
                     line = next(lines) 
