@@ -1,0 +1,69 @@
+
+  _                   .-=-.           .-=-.          .-==-.       
+ { }      __        .' O o '.       .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `._____.'       `.____.'              
+
+Serpent 2 beta
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 2.1.29 (June 12, 2017) -- Contact: serpent@vtt.fi
+
+ - Reference: J. Leppanen, et al. "The Serpent Monte Carlo code: Status,
+              development and applications in 2013." Ann. Nucl. Energy,
+              82 (2015) 142-150.
+
+ - Compiled Mar 22 2019 11:30:51
+
+ - MPI Parallel calculation mode not available
+
+ - OpenMP Parallel calculation mode available
+
+ - Geometry and mesh plotting available
+
+ - Default data path set to: "/home/yvrob/SSS/jeff311/acedata"
+
+Begin calculation on Tue Nov  5 11:45:41 2019
+
+Reading input file "input"...
+Reading input file "coreMaterials"...
+Reading input file "fuel"...
+Reading input file "detectors"...
+Reading input file "geometry"...
+
+Checking duplicate input definitions...
+OK.
+
+Reading pebble bed type geometry:
+
+Reading data from file "fpb_pos"...
+
+Creating geometry...
+OK.
+
+Counting geometry zones...
+
+The geometry consists of 5 levels:
+
+Level 0 size: max 3 zones
+Level 1 size: max 829 zones
+Level 2 size: max 3 zones
+Level 3 size: max 1 zones
+Level 4 size: max 6 zones
+
+Processing cells...
+OK.
+
+Linking materials to geometry...
+OK.
+
+
+***** Tue Nov  5 11:45:42 2019
+
+Input error:
+
+Invalid outer boundary for repeated boundary conditions
+
