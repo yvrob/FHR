@@ -1,0 +1,17 @@
+ene E 4 "scale238"
+
+det flux dl u_pb
+det spectrum dl u_pb de E
+
+det 1 dl u_pb
+
+det U235_001 dl u_pb dr 1   U235 dt 3 1
+det U235_002 dl u_pb dr 2   U235 dt 3 1
+det U235_018 dl u_pb dr 18  U235 dt 3 1
+det U235_102 dl u_pb dr 102 U235 dt 3 1
+
+det U238_001 dl u_pb dr 1   U238 dt 3 1
+det U238_002 dl u_pb dr 2   U238 dt 3 1
+det U238_018 dl u_pb dr 18  U238 dt 3 1
+det U238_102 dl u_pb dr 102 U238 dt 3 1
+

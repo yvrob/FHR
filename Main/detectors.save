@@ -1,0 +1,6 @@
+% --- Detector for tallying the flux energy spectrum
+det 126 dm fuel_126
+
+% Detector 1
+det     U235_001        dm      fuel    dr      1      U235   dt      3       1
+det     Cd113_001       dm      fuel    dr      1      U238   dt      3       1
