@@ -83,8 +83,8 @@ def create_fuel_material(index,fuel_mass_dens,fuel_temp,fuel_enrich):
     string+='mat fuel_{} {} tmp {} burn 1\n'.format(index+1,-fuel_mass_dens,fuel_temp)
     string+='''92235.{}c {}
 92238.{}c {}
-12000.{}c 50.0
-8016.{}c 100.0
+ 6000.{}c 50.0
+ 8016.{}c 100.0
     '''.format(fuel_temp_marker,fuel_enrich*100,fuel_temp_marker,100-fuel_enrich*100,fuel_temp_marker,fuel_temp_marker)    
     return string
 # %% Create FCC lattice filling the core
