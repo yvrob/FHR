@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#SBATCH --job-name=Tf_Tf900
+#SBATCH --job-name=default
+
 #SBATCH --output=unit_cell.o
 
 #SBATCH --error=unit_cell.error
