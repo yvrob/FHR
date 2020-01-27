@@ -22,10 +22,10 @@ folder_case='cases/'
 default_folder='default/'
 input_file='fhr'
 pbed_file='fpb_pos_60'
-exec_file='execute.sub'
+exec_file='co_execute.sub'
 
 list_parameters=['Tf'] #,'fuelmult','fpmult']
-parameter_values=[[700,750,800,850,900,950,1000,1050,1100]] #,[0.5,1,2],[0.5,1,2]]
+parameter_values=[[900]] #,[0.5,1,2],[0.5,1,2]]
 
 parameter_indexes=[]
 for i in range(len(parameter_values)):
