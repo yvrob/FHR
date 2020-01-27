@@ -1,0 +1,17 @@
+% --- Detector for tallying the flux energy spectrum
+det tot
+
+det flibe dm flibe
+
+det peb dl 300 
+
+det f1 dm fuel_1
+det f2 dm fuel_2
+det f3 dm fuel_3
+det f4 dm fuel_4
+det f5 dm fuel_5
+det f6 dm fuel_6
+det f7 dm fuel_7
+det f8 dm fuel_8
+
+
