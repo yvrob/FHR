@@ -11,7 +11,7 @@
 
 #SBATCH --time=72:00:00
 
-#SBATCH --nodes=8
+#SBATCH --nodes=16
 
 #SBATCH --ntasks-per-node=1
 
@@ -31,4 +31,4 @@
 
 # run command
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
-mpirun -np 8 --map-by ppr:1:node:pe=20 /global/home/users/yvesrobert/Softwares/serpent2.1.31_gcc/sss2 -omp 20 input
+mpirun -np 16 --map-by ppr:1:node:pe=20 /global/home/users/yvesrobert/Softwares/serpent2.1.31_gcc/sss2 -omp 20 input
