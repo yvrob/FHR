@@ -4,14 +4,14 @@ ene E 4 "scale44"
 det flux dl u_pb
 det flux_spectrum dl u_pb de E
 
-det flux_1 dx -2 2 1 dy -2 2 1 dz -2 2 1
-%det flux_2 dx -2 2 2 dy -2 2 2 dz -2 2 1
-%det flux_3 dx -2 2 3 dy -2 2 3 dz -2 2 2
-%det flux_4 dx -2 2 4 dy -2 2 4 dz -2 2 2
-%det flux_5 dx -2 2 5 dy -2 2 5 dz -2 2 3
-%det flux_6 dx -2 2 6 dy -2 2 6 dz -2 2 4
-%det flux_7 dx -2 2 7 dy -2 2 7 dz -2 2 4
-%det flux_8 dx -2 2 8 dy -2 2 8 dz -2 2 5
-%det flux_9 dx -2 2 9 dy -2 2 9 dz -2 2 6
+det flux_1 dx -3 3 1 dy -3 3 1 dz -3 3 1
+%det flux_2 dx -3 3 2 dy -3 3 2 dz -3 3 1
+%det flux_3 dx -3 3 3 dy -3 3 3 dz -3 3 2
+%det flux_4 dx -3 3 4 dy -3 3 4 dz -3 3 2
+%det flux_5 dx -3 3 5 dy -3 3 5 dz -3 3 3
+%det flux_6 dx -3 3 6 dy -3 3 6 dz -3 3 4
+%det flux_7 dx -3 3 7 dy -3 3 7 dz -3 3 4
+%det flux_8 dx -3 3 8 dy -3 3 8 dz -3 3 5
+%det flux_9 dx -3 3 9 dy -3 3 9 dz -3 3 6
 
 det sample_1 du 1

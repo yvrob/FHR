@@ -7,7 +7,7 @@
     
 %%---surf for core
 surf infinite inf
-surf core_cyl  cube 0 0 0 2 
+surf core_cyl  cube 0 0 0 3
 
 %%---surf for triso inside fuel pebbles (spheres)
 surf central_graphite sph 0 0 0 1.25114 % internal graphite
