@@ -1,8 +1,8 @@
 
 %%---plotting geometry
-plot 1 1000 1000
-plot 2 1000 1000
-plot 3 1000 1000
+plot 1 1000 1000 3
+plot 2 1000 1000 3
+plot 3 1000 1000 3
     
     
 %%---surf for core
