@@ -7,5 +7,5 @@ include geometry
 set opti 4
 set ures 1
 set power 236000000.0
-set pop 10000 1000 100
+set pop 10000 30000 3000
 set bc 3
