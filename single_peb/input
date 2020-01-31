@@ -1,4 +1,4 @@
-
+set acelib "/global/home/groups/co_nuclear/serpent/xsdata/endfb7/sss_endfb7u.xsdata"
 include coreMaterials
 include fuel
 include detectors
@@ -7,5 +7,5 @@ include geometry
 set opti 4
 set ures 1
 set power 236000000.0
-set pop 1000 1000 100
+set pop 1000 10000 1000
 set bc 3

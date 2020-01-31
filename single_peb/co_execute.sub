@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#SBATCH --job-name=default
+
+#SBATCH --output=unit_cell.o
+
+#SBATCH --error=unit_cell.error
+
+#SBATCH --partition=savio
+
+#SBATCH --time=72:00:00
+
+#SBATCH --nodes=16
+
+#SBATCH --ntasks-per-node=1
+
+#SBATCH--cpus-per-task=20
+
+# QoS: savio_normal
+
+#SBATCH --qos=nuclear_savio_normal
+
+# Account:
+
+#SBATCH -A co_nuclear
+
+#SBATCH --mail-user=yves.robert@berkeley.edu
+#SBATCH --mail-type=all
+
+# run command
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+mpirun -np 16 --map-by ppr:1:node:pe=20 /global/home/users/yvesrobert/Softwares/serpent2.1.31_gcc/sss2 -omp 20 input
+
