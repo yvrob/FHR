@@ -1,0 +1,22 @@
+
+    %%---plotting geometry
+    plot 1 1000 1000
+    plot 2 1000 1000
+    plot 3 1000 1000
+    
+    
+%%---surf for core
+surf infinite inf
+surf core_cyl  cube 0 0 0 2 
+
+%%---surf for triso inside fuel pebbles (spheres)
+surf central_graphite sph 0 0 0 1.25114 % internal graphite
+surf graphite_mat sph 0 0 0 1.4 % graphite matrix maximum radius
+
+
+    cell out2 0 outside core_cyl
+    
+pbed u_pb u_flibe "fpb_pos" 
+cell c_pb 0 fill u_pb  -core_cyl %-upper_plane lower_plane
+cell c_flibe u_flibe Flibe924 -infinite
+
