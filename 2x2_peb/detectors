@@ -6,7 +6,7 @@ det flux dl u_pb
 
 det flibe du u_flibe
 
-det flux_1 dx -6 612 dy -6 6 1 dz -6 6 1
+det flux_1 dx -6 6 1 dy -6 6 1 dz -6 6 1
 det flux_2 dx -6 6 2 dy -6 6 2 dz -6 6 2
 %det flux_3 dx -6 6 3 dy -6 6 3 dz -6 6 2
 %det flux_4 dx -6 6 4 dy -6 6 4 dz -6 6 2
