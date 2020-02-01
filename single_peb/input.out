@@ -76,7 +76,7 @@
 
  Nuclide    1 / 18 : 3006.09c -- lithium 6 (Li-6)
 
- Pointers                     : 46422 2836595
+ Pointers                     : 46515 2836595
  Primary type                 : Transport
  Nuclide ZAI                  : 30060
  Library ID                   : 09c
@@ -163,7 +163,7 @@
 
  Nuclide    2 / 18 : 3007.09c -- lithium 7 (Li-7)
 
- Pointers                     : 49531 2867353
+ Pointers                     : 49624 2867353
  Primary type                 : Transport
  Nuclide ZAI                  : 30070
  Library ID                   : 09c
@@ -252,7 +252,7 @@
 
  Nuclide    3 / 18 : 4009.09c -- beryllium 9 (Be-9)
 
- Pointers                     : 52781 2883813
+ Pointers                     : 52874 2883813
  Primary type                 : Transport
  Nuclide ZAI                  : 40090
  Library ID                   : 09c
@@ -314,7 +314,7 @@
 
  Nuclide    4 / 18 : 5010.09c -- boron 10 (B-10)
 
- Pointers                     : 63445 3894379
+ Pointers                     : 63538 3894379
  Primary type                 : Transport
  Nuclide ZAI                  : 50100
  Library ID                   : 09c
@@ -414,7 +414,7 @@
 
  Nuclide    5 / 18 : 5011.09c -- boron 11 (B-11)
 
- Pointers                     : 67498 3941963
+ Pointers                     : 67591 3941963
  Primary type                 : Transport
  Nuclide ZAI                  : 50110
  Library ID                   : 09c
@@ -483,7 +483,7 @@
 
  Nuclide    6 / 18 : 6000.09c -- natural carbon (C-nat)
 
- Pointers                     : 56799 3579794
+ Pointers                     : 56892 3579794
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 09c
@@ -553,7 +553,7 @@
 
  Nuclide    7 / 18 : 6000.09s -- natural carbon (C-nat)
 
- Pointers                     : 85757 3579794
+ Pointers                     : 85850 3579794
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 09s
@@ -626,7 +626,7 @@
 
  Nuclide    8 / 18 : 6000.09s -- natural carbon (C-nat)
 
- Pointers                     : 87766 3579794
+ Pointers                     : 87859 3579794
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 09s
@@ -699,7 +699,7 @@
 
  Nuclide    9 / 18 : 6000.09s -- natural carbon (C-nat)
 
- Pointers                     : 89775 3579794
+ Pointers                     : 89868 3579794
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 09s
@@ -772,7 +772,7 @@
 
  Nuclide   10 / 18 : 6000.09s -- natural carbon (C-nat)
 
- Pointers                     : 91784 3579794
+ Pointers                     : 91877 3579794
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 09s
@@ -845,7 +845,7 @@
 
  Nuclide   11 / 18 : 6000.09s -- natural carbon (C-nat)
 
- Pointers                     : 93793 3579794
+ Pointers                     : 93886 3579794
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 09s
@@ -918,7 +918,7 @@
 
  Nuclide   12 / 18 : 6000.09s -- natural carbon (C-nat)
 
- Pointers                     : 95802 3579794
+ Pointers                     : 95895 3579794
  Primary type                 : Transport
  Nuclide ZAI                  : 60000
  Library ID                   : 09s
@@ -991,7 +991,7 @@
 
  Nuclide   13 / 18 : 8016.09c -- oxygen 16 (O-16)
 
- Pointers                     : 80352 5147435
+ Pointers                     : 80445 5147435
  Primary type                 : Transport
  Nuclide ZAI                  : 80160
  Library ID                   : 09c
@@ -1106,7 +1106,7 @@
 
  Nuclide   14 / 18 : 9019.09c -- fluorine 19 (F-19)
 
- Pointers                     : 54060 3461323
+ Pointers                     : 54153 3461323
  Primary type                 : Transport
  Nuclide ZAI                  : 90190
  Library ID                   : 09c
@@ -1188,7 +1188,7 @@
 
  Nuclide   15 / 18 : 12000.09c -- natural magnesium (Mg-nat)
 
- Pointers                     : 76518 5087850
+ Pointers                     : 76611 5087850
  Primary type                 : Transport
  Nuclide ZAI                  : 120000
  Library ID                   : 09c
@@ -1285,7 +1285,7 @@
 
  Nuclide   16 / 18 : 14028.09c -- silicon 28 (Si-28)
 
- Pointers                     : 58662 3656438
+ Pointers                     : 58755 3656438
  Primary type                 : Transport
  Nuclide ZAI                  : 140280
  Library ID                   : 09c
@@ -1395,7 +1395,7 @@
 
  Nuclide   17 / 18 : 92235.09c -- uranium 235 (U-235)
 
- Pointers                     : 69288 4085571
+ Pointers                     : 69381 4085571
  Primary type                 : Transport
  Nuclide ZAI                  : 922350
  Library ID                   : 09c
@@ -1490,7 +1490,7 @@
 
  Nuclide   18 / 18 : 92238.09c -- uranium 238 (U-238)
 
- Pointers                     : 72903 4433149
+ Pointers                     : 72996 4433149
  Primary type                 : Transport
  Nuclide ZAI                  : 922380
  Library ID                   : 09c

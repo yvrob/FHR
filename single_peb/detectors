@@ -2,7 +2,9 @@
 ene E 4 "scale44"
 
 det flux dl u_pb
-det flux_spectrum dl u_pb de E
+det spectrum dl u_pb de E
+det flibe du u_flibe
+
 
 det flux_1 dx -3 3 1 dy -3 3 1 dz -3 3 1
 %det flux_2 dx -3 3 2 dy -3 3 2 dz -3 3 1

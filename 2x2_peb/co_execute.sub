@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=default
+#SBATCH --job-name=2x2
 
 #SBATCH --output=unit_cell.o
 
