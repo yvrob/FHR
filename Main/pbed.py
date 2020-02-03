@@ -188,15 +188,15 @@ def write_materials(path, fuel_mass_dens, fuel_temp, fuel_m_ini, triso_radii, tr
     
     fuel_file.close()    
 
-def write_detectors(path, energy_structure):
+def write_detectors(path, energy_structure,rad_pebble):
     det_file=open(path+'detectors','w')
     string='''
     ene E 4 "{}"
     
     '''.format(energy_structure)
-    det_file.write(string)
-    det_file.write('det flux dl u_pb\n')
-    det_file.write('det spectrum dl u_pb de E\n')
+    # det_file.write(string)
+    det_file.write('det flux dl u_pb dv {}\n'.format(4/3*math.pi*rad_pebble**3))
+    #det_file.write('det spectrum dl u_pb de E\n')
     det_file.close()
 
 def write_input(path,acelib,opti,ures,power,n_particles,n_active,n_inactive):
@@ -320,7 +320,7 @@ if __name__=='__main__':
     # %% Write Serpent folder
     write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,refl_thickness) # Write geometry file   
     write_materials(path_fuel+'_0', fuel_mass_dens, fuel_temp, fuel_m_ini, triso_radii, triso_a) # Write fuel file materials and triso, pebbles informations
-    write_detectors(path, energy_structure) # Write detector file with energy structure and detectors
+    write_detectors(path, energy_structure,pebble_rad[-1]) # Write detector file with energy structure and detectors
     write_input(path,acelib,opti,ures,power,n_particles,n_active,n_inactive) # Write input file with simulation options
     print('\tDONE. Time elapsed: {:.4} s'.format(time()-t))    
 
@@ -329,19 +329,19 @@ if __name__=='__main__':
     
     det_file=open(path+'detectors','a')
     
-    Nr=1
+    Nr=2
     diam=2*rad_core
     height=zmax-zmin
     size_bins_R=diam/Nr
     size_bins_Z=height/(int(Nr*height/diam))
-    while max(size_bins_R,size_bins_Z) > 2*pebble_rad[-1]:
-        size_bins_R=(diam+2*pebble_rad[-1])/Nr                                                                                                                                                                                            
-        size_bins_Z=(height+2*pebble_rad[-1])/(int(Nr*height/diam))                                                                                                                                                                       
+    while min(size_bins_R,size_bins_Z) > 2*pebble_rad[-1]:                                                                                                                                                                     
         vol_bin=size_bins_R*size_bins_R*size_bins_Z
         string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {} dv {}\n'.format(Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,zmin-pebble_rad[-1],zmax+pebble_rad[-1],int(Nr*height/diam),vol_bin)
         #string='det flux_{} dx {} {} {} dy {} {} {} dz {} {} {} dv {} dm Flibe924\n'.format(Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,-rad_core-pebble_rad[-1],rad_core+pebble_rad[-1],Nr,zmin-pebble_rad[-1],zmax+pebble_rad[-1],int(Nr*height/diam),vol_bin)    
         det_file.write(string)
         Nr+=1
+        size_bins_R=(diam)/Nr                                                                                                                                                                                            
+        size_bins_Z=(height)/(int(Nr*height/diam))  
     
     if n_samp!=0:
         index=0
@@ -369,6 +369,7 @@ if __name__=='__main__':
                 index+=1
     else:
         sampling_list=[]
+        
     det_file.close()
     
     
