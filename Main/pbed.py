@@ -292,7 +292,7 @@ if __name__=='__main__':
     qual = 2000 # Quality of the plots (px)
     
     acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to cross sections library
-    opti=4 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
+    opti=1 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
     ures = 1 # Unresolved resonance probability table sampling
     n_particles=100000 #10000 # Number of particles per cycle
     n_active=10000 #10000 # Number of inactive cycles
