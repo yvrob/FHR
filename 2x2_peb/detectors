@@ -1,8 +1,5 @@
 
-ene E 4 "scale44"
-
 det flux dl u_pb
-%det spectrum dl u_pb de E
 
 det flibe du u_flibe
 
@@ -10,27 +7,6 @@ det flux_1 dx -6 6 1 dy -6 6 1 dz -6 6 1
 det flux_2_aligned dx -6 6 2 dy -6 6 2 dz -6 6 2
 det flux_2_mis_neg dx -7 5 2 dy -7 5 2 dz -7 5 2
 det flux_2_mis_pos dx -5 7 2 dy -5 7 2 dz -5 7 2
+det flux_2_mis_neg2 dx -6.5 5.5 2 dy -6.5 5.5 2 dz -6.5 5.5 2
+det flux_2_mis_pos2 dx -5.5 6.5 2 dy -5.5 6.5 2 dz -5.5 6.5 2
 
-%det flux_3 dx -6 6 3 dy -6 6 3 dz -6 6 2
-%det flux_4 dx -6 6 4 dy -6 6 4 dz -6 6 2
-%det flux_5 dx -6 6 5 dy -6 6 5 dz -6 6 3
-%det flux_6 dx -6 6 6 dy -6 6 6 dz -6 6 4
-%det flux_7 dx -6 6 7 dy -6 6 7 dz -6 6 4
-%det flux_8 dx -6 6 8 dy -6 6 8 dz -6 6 5
-%det flux_9 dx -6 6 9 dy -6 6 9 dz -6 6 6
-
-mesh 8 1 flux_1 1 3000 3000
-mesh 8 1 flux_1 2 3000 3000
-mesh 8 1 flux_1 3 3000 3000
-
-mesh 8 1 flux_2_aligned 1 3000 3000
-mesh 8 1 flux_2_aligned 2 3000 3000
-mesh 8 1 flux_2_aligned 3 3000 3000
-
-mesh 8 1 flux_2_mis_neg 1 3000 3000
-mesh 8 1 flux_2_mis_neg 2 3000 3000
-mesh 8 1 flux_2_mis_neg 3 3000 3000
-
-mesh 8 1 flux_2_mis_pos 1 3000 3000
-mesh 8 1 flux_2_mis_pos 2 3000 3000
-mesh 8 1 flux_2_mis_pos 3 3000 3000
