@@ -195,7 +195,7 @@ def write_detectors(path, energy_structure,rad_pebble):
     
     '''.format(energy_structure)
     # det_file.write(string)
-    det_file.write('det flux dl u_pb dv {}\n'.format(4/3*math.pi*rad_pebble**3))
+    det_file.write('det pebbles dl u_pb dv {}\n'.format(4/3*math.pi*rad_pebble**3))
     #det_file.write('det spectrum dl u_pb de E\n')
     det_file.close()
 
