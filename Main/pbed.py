@@ -33,7 +33,7 @@ def create_FCC(d,x0,y0,z0):
     ])
     return FCC
 
-def create_FCC_lattice(path,pebble_a,zmin,zmax,rad_core,partial_pebbles):
+def create_FCC_lattice(path,pebble_a,zmin,zmax,rad_core,partial_pebbles,shape='cylinder'):
     FCC=create_FCC(pebble_a,0,0,0) # Unit-cell
     
     # Calculate core parameters and boundaries
@@ -70,8 +70,11 @@ def create_FCC_lattice(path,pebble_a,zmin,zmax,rad_core,partial_pebbles):
                         rad_lim=rad_core-pebble_rad[-1]
                         ax_lim_low=zmin+pebble_rad[-1]
                         ax_lim_high=zmax-pebble_rad[-1]
-                        
-                    if to_add[i][0]**2+to_add[i][1]**2<=rad_lim**2 and to_add[i][2]>=ax_lim_low and to_add[i][2]<=ax_lim_high:
+                    if shape=='cylinder':
+                        test=to_add[i][0]**2+to_add[i][1]**2<=rad_lim**2 and to_add[i][2]>=ax_lim_low and to_add[i][2]<=ax_lim_high
+                    elif shape=='cube':
+                        test=abs(to_add[i][0])<=rad_lim and abs(to_add[i][1])<=rad_lim and to_add[i][2]>=ax_lim_low and to_add[i][2]<=ax_lim_high
+                    if test==True:
                         for j in range(len(to_add[i])):
                             if to_add[i][j]==-0:
                                 file.write('{0:.6f}\t'.format(to_add[i][j]+0))
@@ -106,8 +109,9 @@ def process_lattice(path):
             for line in istr:
                 ostr.write(line.rstrip('\n') + '\t' + str(index) + '\n')
                 index+=1    
-def write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,refl_thickness):
+def write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,refl_thickness=0,bc=0):
     geometry_file=open(path+'geometry','w')
+    geometry_file.write('set bc {}'.format(bc))
     if plot==True:   
         string='''
         %%---plotting geometry
@@ -281,6 +285,8 @@ if __name__=='__main__':
     pebble_a=2.275414*2*multiplier # Pebble FCC cell side length (cm)
     
     # Core 
+    shape='cube'
+    bc=2
     rad_core=100 # Core radius (cm)
     zmin=0 # Minimum elevation of the core (cm)
     zmax=200 # Maximum elevation of the core (cm)
@@ -308,7 +314,7 @@ if __name__=='__main__':
     print('------------------------------ CREATE GEOMETRY ------------------------------')
     # %% Create FCC lattice filling the core
     t=time()
-    delta_x, delta_z = create_FCC_lattice(path,pebble_a,zmin,zmax,rad_core,partial_pebbles)
+    delta_x, delta_z = create_FCC_lattice(path,pebble_a,zmin,zmax,rad_core,partial_pebbles,'cube')
     n_pebbles=sum(1 for line in open(path+'fpb_pos'))
     print('Number of pebbles calculated: {}'.format(n_pebbles))
     
@@ -318,7 +324,7 @@ if __name__=='__main__':
     print('Number of pebbles in the core: {}'.format(n_pebbles))   
     
     # %% Write Serpent folder
-    write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,refl_thickness) # Write geometry file   
+    write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,refl_thickness,bc) # Write geometry file   
     write_materials(path_fuel+'_0', fuel_mass_dens, fuel_temp, fuel_m_ini, triso_radii, triso_a) # Write fuel file materials and triso, pebbles informations
     write_detectors(path, energy_structure,pebble_rad[-1]) # Write detector file with energy structure and detectors
     write_input(path,acelib,opti,ures,power,n_particles,n_active,n_inactive) # Write input file with simulation options
