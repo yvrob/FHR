@@ -33,8 +33,26 @@ def create_FCC(d,x0,y0,z0):
     ])
     return FCC
 
-def create_FCC_lattice(path,pebble_a,zmin,zmax,rad_core,partial_pebbles,shape='cylinder'):
-    FCC=create_FCC(pebble_a,0,0,0) # Unit-cell
+def create_SC(d,x0,y0,z0):
+    ''' Create a FCC lattice of pebbles center in (x0,y0,z0) '''
+    a=d/2
+    SC = np.array([
+    [x0+a,y0+a,z0+a],
+    [x0-a,y0+a,z0+a],
+    [x0-a,y0-a,z0+a],
+    [x0+a,y0-a,z0+a],
+    [x0+a,y0+a,z0-a],
+    [x0-a,y0+a,z0-a],
+    [x0-a,y0-a,z0-a],
+    [x0+a,y0-a,z0-a]
+    ])
+    return SC
+
+def create_lattice(path,pebble_a,zmin,zmax,rad_core,partial_pebbles,shape='cylinder',lattice='FCC'):
+    if lattice=='FCC':
+        lat=create_FCC(pebble_a,0,0,0) # Unit-cell
+    elif lattice=='SC':
+        lat=create_SC(pebble_a,0,0,0) # Unit-cell
     
     # Calculate core parameters and boundaries
     zcenter=(zmin+zmax)/2 # Axial center of the core
@@ -60,7 +78,7 @@ def create_FCC_lattice(path,pebble_a,zmin,zmax,rad_core,partial_pebbles,shape='c
             x=min_X
             while x<=max_X:
                 origin=np.array([x,y,z])
-                to_add=np.round(FCC+origin,6) # Shift the origin of the FCC to match the center
+                to_add=np.round(lat+origin,6) # Shift the origin of the FCC to match the center
                 for i in range(len(to_add)):
                     if partial_pebbles:
                         rad_lim=rad_core+pebble_rad[-1]
@@ -109,7 +127,7 @@ def process_lattice(path):
             for line in istr:
                 ostr.write(line.rstrip('\n') + '\t' + str(index) + '\n')
                 index+=1    
-def write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,refl_thickness=0,bc=0):
+def write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,refl_thickness=0,bc=1):
     geometry_file=open(path+'geometry','w')
     geometry_file.write('set bc {}'.format(bc))
     if plot==True:   
@@ -118,25 +136,29 @@ def write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,
         plot 1 {} {}
         plot 3 {} {} {}
         
-        '''.format(int(qual*(delta_x/delta_z)),qual,qual,qual, (zmin+zmax)/2)
+        '''.format(int(qual*(delta_x/delta_z)),qual,qual,qual, (zmin))
         geometry_file.write(string)
     else:
         string=''
-        
+
     # Surfaces to create core, triso particles and pebbles geometry
     string='''
     %%---surf for core
     surf infinite inf
-    surf core_cyl cylz 0 0 {} {} {} % infinite cylinder 
-    
+
     %%---surf for triso inside fuel pebbles (spheres)
     surf central_graphite sph 0 0 0 {} % internal graphite
     surf graphite_mat sph 0 0 0 {} % graphite matrix maximum radius
-    
-    '''.format(rad_core,zmin,zmax,pebble_rad[0],pebble_rad[1]) #.format(rad_core,zmin,zmax,zmin,zmax,pebble_rad[0],pebble_rad[1])
+
+    '''.format(pebble_rad[0],pebble_rad[1]) #.format(rad_core,zmin,zmax,zmin,zmax,pebble_rad[0],pebble_rad[1])
     geometry_file.write(string)
-    
-    if refl_thickness!=0:
+
+    if shape=='cylinder':
+        geometry_file.write('surf core_cyl cylz 0 0 {} {} {} % infinite cylinder\n'.format(rad_core,zmin,zmax))
+    elif shape=='cube':
+        geometry_file.write('surf core_cyl cuboid {} {} {} {} {} {}\n'.format(-rad_core,rad_core,-rad_core,rad_core,zmin,zmax))
+
+    if refl_thickness!=0 and bc==1:
         string='''
         %%---graphite reflector
         surf cyl_out cyl 0.0 0.0 {} {} {} % outer reflector surface
@@ -286,6 +308,7 @@ if __name__=='__main__':
     
     # Core 
     shape='cube'
+    lattice='SC'
     bc=2
     rad_core=100 # Core radius (cm)
     zmin=0 # Minimum elevation of the core (cm)
@@ -314,7 +337,7 @@ if __name__=='__main__':
     print('------------------------------ CREATE GEOMETRY ------------------------------')
     # %% Create FCC lattice filling the core
     t=time()
-    delta_x, delta_z = create_FCC_lattice(path,pebble_a,zmin,zmax,rad_core,partial_pebbles,'cube')
+    delta_x, delta_z = create_lattice(path,pebble_a,zmin,zmax,rad_core,partial_pebbles,'cube','SC')
     n_pebbles=sum(1 for line in open(path+'fpb_pos'))
     print('Number of pebbles calculated: {}'.format(n_pebbles))
     
@@ -325,7 +348,7 @@ if __name__=='__main__':
     
     # %% Write Serpent folder
     write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,refl_thickness,bc) # Write geometry file   
-    write_materials(path_fuel+'_0', fuel_mass_dens, fuel_temp, fuel_m_ini, triso_radii, triso_a) # Write fuel file materials and triso, pebbles informations
+    write_materials(path_fuel, fuel_mass_dens, fuel_temp, fuel_m_ini, triso_radii, triso_a) # Write fuel file materials and triso, pebbles informations
     write_detectors(path, energy_structure,pebble_rad[-1]) # Write detector file with energy structure and detectors
     write_input(path,acelib,opti,ures,power,n_particles,n_active,n_inactive) # Write input file with simulation options
     print('\tDONE. Time elapsed: {:.4} s'.format(time()-t))    
