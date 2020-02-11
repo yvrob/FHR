@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#SBATCH --job-name=py_pbed
+
+#SBATCH --output=py_pbed.o
+
+#SBATCH --error=py_pbed.error
+
+#SBATCH --partition=savio
+
+#SBATCH --time=72:00:00
+
+#SBATCH --nodes=1
+
+#SBATCH --ntasks-per-node=1
+
+#SBATCH--cpus-per-task=20
+
+# QoS: savio_normal
+
+#SBATCH --qos=nuclear_savio_normal  
+
+# Account:
+
+#SBATCH -A co_nuclear
+
+#SBATCH --mail-user=yves.robert@berkeley.edu
+#SBATCH --mail-type=all
+
+# run command
+python pbed.py > log
+
