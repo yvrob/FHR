@@ -154,16 +154,24 @@ def write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,
     geometry_file.write(string)
 
     if shape=='cylinder':
-        geometry_file.write('surf core_cyl cylz 0 0 {} {} {} % infinite cylinder\n'.format(rad_core,zmin,zmax))
+        geometry_file.write('surf core_surf cylz 0 0 {} {} {} % infinite cylinder\n'.format(rad_core,zmin,zmax))
     elif shape=='cube':
-        geometry_file.write('surf core_cyl cuboid {} {} {} {} {} {}\n'.format(-rad_core,rad_core,-rad_core,rad_core,zmin,zmax))
+        geometry_file.write('surf core_surf cuboid {} {} {} {} {} {}\n'.format(-rad_core,rad_core,-rad_core,rad_core,zmin,zmax))
 
     if refl_thickness!=0 and bc==1:
-        string='''
-        %%---graphite reflector
-        surf cyl_out cyl 0.0 0.0 {} {} {} % outer reflector surface
-        cell refl_cylinder 0 Graphite924 core_cyl -cyl_out
-        cell out2 0 outside cyl_out
+        if shape=='cylinder':
+            string='''
+            %%---graphite reflector   
+            surf refl_out cyl 0.0 0.0 {} {} {} % outer reflector surface
+            '''.format(rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness)
+        elif shape=='cube':
+            string='''
+            %%---graphite reflector 
+            surf refl_out cuboid {} {} {} {} {} {} % outer reflector surface 
+            '''.format(-rad_core-refl_thickness,rad_core+refl_thickness,-rad_core-refl_thickness,rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness)  
+        string+='''
+        cell refl_cylinder 0 Graphite924 core_surf -refl_out
+        cell out2 0 outside refl_out
         '''.format(rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness)
         geometry_file.write(string)
     else:
@@ -175,7 +183,7 @@ def write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,
     # Create pebble ped and flibe universes
     string='''
     pbed u_pb u_flibe "fpb_pos" 
-    cell c_pb 0 fill u_pb  -core_cyl %-upper_plane lower_plane
+    cell c_pb 0 fill u_pb  -core_surf %-upper_plane lower_plane
     cell c_flibe u_flibe Flibe924 -infinite
     
     '''
@@ -310,7 +318,7 @@ if __name__=='__main__':
     # Core 
     shape='cube'
     lattice='SC'
-    bc=2
+    bc=1
     rad_core=101.02838160000002 # Core radius (cm)
     zmin=-1.0283816000000172 # Minimum elevation of the core (cm)
     zmax=201.02838160000002 # Maximum elevation of the core (cm)
