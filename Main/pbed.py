@@ -136,7 +136,7 @@ def write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,
         plot 1 {} {}
         plot 3 {} {} {}
         
-        '''.format(int(qual*(delta_x/delta_z)),qual,qual,qual, (zmin))
+        '''.format(int(qual*(delta_x/delta_z)),qual,qual,qual, (zmin+zmax)/2)
         geometry_file.write(string)
     else:
         string=''
@@ -154,16 +154,24 @@ def write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,
     geometry_file.write(string)
 
     if shape=='cylinder':
-        geometry_file.write('surf core_cyl cylz 0 0 {} {} {} % infinite cylinder\n'.format(rad_core,zmin,zmax))
+        geometry_file.write('surf core_surf cylz 0 0 {} {} {} % infinite cylinder\n'.format(rad_core,zmin,zmax))
     elif shape=='cube':
-        geometry_file.write('surf core_cyl cuboid {} {} {} {} {} {}\n'.format(-rad_core,rad_core,-rad_core,rad_core,zmin,zmax))
+        geometry_file.write('surf core_surf cuboid {} {} {} {} {} {}\n'.format(-rad_core,rad_core,-rad_core,rad_core,zmin,zmax))
 
     if refl_thickness!=0 and bc==1:
-        string='''
-        %%---graphite reflector
-        surf cyl_out cyl 0.0 0.0 {} {} {} % outer reflector surface
-        cell refl_cylinder 0 Graphite924 core_cyl -cyl_out
-        cell out2 0 outside cyl_out
+        if shape=='cylinder':
+            string='''
+            %%---graphite reflector   
+            surf refl_out cyl 0.0 0.0 {} {} {} % outer reflector surface
+            '''.format(rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness)
+        elif shape=='cube':
+            string='''
+            %%---graphite reflector 
+            surf refl_out cuboid {} {} {} {} {} {} % outer reflector surface 
+            '''.format(-rad_core-refl_thickness,rad_core+refl_thickness,-rad_core-refl_thickness,rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness)  
+        string+='''
+        cell refl_cylinder 0 Graphite924 core_surf -refl_out
+        cell out2 0 outside refl_out
         '''.format(rad_core+refl_thickness,zmin-refl_thickness,zmax+refl_thickness)
         geometry_file.write(string)
     else:
@@ -175,7 +183,7 @@ def write_geometry(path,plot,qual,delta_x,delta_z,zmin,zmax,pebble_rad,rad_core,
     # Create pebble ped and flibe universes
     string='''
     pbed u_pb u_flibe "fpb_pos" 
-    cell c_pb 0 fill u_pb  -core_cyl %-upper_plane lower_plane
+    cell c_pb 0 fill u_pb  -core_surf %-upper_plane lower_plane
     cell c_flibe u_flibe Flibe924 -infinite
     
     '''
@@ -283,7 +291,8 @@ def create_fuel_material(index,fuel_mass_dens,fuel_temp,fuel_m_ini): ###########
 92238.{}c {}
  6000.{}c {}
  8016.{}c {}
-    '''.format(fuel_temp_marker,-fuel_m_ini*1.80282E-01,fuel_temp_marker,-fuel_m_ini*7.34940E-01,fuel_temp_marker,-fuel_m_ini*2.31281E-02,fuel_temp_marker, -fuel_m_ini*6.16498E-02)    
+    '''.format(fuel_temp_marker,-fuel_m_ini*1.80282E-01,fuel_temp_marker,-fuel_m_ini*7.34940E-01,fuel_temp_marker,-fuel_m_ini*2.31281E-02,fuel_temp_marker, 
+-fuel_m_ini*6.16498E-02)    
     return string
 
 #%%
@@ -302,18 +311,20 @@ if __name__=='__main__':
 
     # Pebble lattice information
     partial_pebbles=False
-    multiplier=3.70 # Just to keep the proportions with the model
-    pebble_rad=[1.251140*multiplier, 1.4*multiplier,1.5*multiplier] # List of radii for the pebbles (cm) [innner graphite, graphite matrix, external radius]
-    pebble_a=2.275414*2*multiplier # Pebble FCC cell side length (cm)
+    pebble_rad=[1.251140, 1.4,1.5] # List of radii for the pebbles (cm) [innner graphite, graphite matrix, external radius]
+    pebble_a=2.275414*2 # Pebble FCC cell side length (cm)    
     
     # Core 
+    divider=3.70
+    rad_core=101.02838160000002/divider # Core radius (cm)
+    zmin=-1.0283816000000172/divider # Minimum elevation of the core (cm)
+    zmax=201.02838160000002/divider # Maximum elevation of the core (cm)
+    refl_thickness=50/divider # Thickness of the graphite external reflector (cm) 
+    power = 2.36e8 # Total power (W)
+    bc=1
     shape='cube'
     lattice='SC'
-    bc=2
-    rad_core=100 # Core radius (cm)
-    zmin=0 # Minimum elevation of the core (cm)
-    zmax=200 # Maximum elevation of the core (cm)
-    refl_thickness=10 # migration_length_C/20 # Thickness of the graphite external reflector (cm) 
+    refl_thickness=50 # migration_length_C/20 # Thickness of the graphite external reflector (cm) 
     power = 2.36e8 # Total power (W)
     
     # Simulation
@@ -321,12 +332,12 @@ if __name__=='__main__':
     qual = 2000 # Quality of the plots (px)
     
     acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to cross sections library
-    opti=1 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
+    opti=4 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
     ures = 1 # Unresolved resonance probability table sampling
     n_particles=100000 #10000 # Number of particles per cycle
     n_active=10000 #10000 # Number of inactive cycles
     n_inactive=1000 #1000 # Number of active cycles
-    omp = 8
+    omp = 20
     
     # Detectors
     energy_structure='scale238' # Name of predefined energy structure to use for detectors
@@ -435,4 +446,5 @@ if __name__=='__main__':
     ax.set_xlabel('x [cm]')
     ax.set_ylabel('z [cm]')
     ax.set_zlabel('z [cm]')
+
 

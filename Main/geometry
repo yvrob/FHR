@@ -1,22 +1,26 @@
-set bc 2
+set bc 1
         %%---plotting geometry
         plot 1 2000 2000
-        plot 3 2000 2000 0
+        plot 3 2000 2000 27.027027027027025
         
         
     %%---surf for core
     surf infinite inf
 
     %%---surf for triso inside fuel pebbles (spheres)
-    surf central_graphite sph 0 0 0 4.629218 % internal graphite
-    surf graphite_mat sph 0 0 0 5.18 % graphite matrix maximum radius
+    surf central_graphite sph 0 0 0 1.25114 % internal graphite
+    surf graphite_mat sph 0 0 0 1.4 % graphite matrix maximum radius
 
-    surf core_cyl cuboid -100 100 -100 100 0 200
+    surf core_surf cuboid -27.304968000000002 27.304968000000002 -27.304968000000002 27.304968000000002 -0.2779409729729776 54.33199502702703
 
-        cell out2 0 outside core_cyl
+            %%---graphite reflector 
+            surf refl_out cuboid -77.304968 77.304968 -77.304968 77.304968 -50.27794097297298 104.33199502702703 % outer reflector surface 
+            
+        cell refl_cylinder 0 Graphite924 core_surf -refl_out
+        cell out2 0 outside refl_out
         
     pbed u_pb u_flibe "fpb_pos" 
-    cell c_pb 0 fill u_pb  -core_cyl %-upper_plane lower_plane
+    cell c_pb 0 fill u_pb  -core_surf %-upper_plane lower_plane
     cell c_flibe u_flibe Flibe924 -infinite
     
     
