@@ -1,0 +1,16 @@
+% --- Material volumes:
+
+% Produced Fri Mar 13 16:10:43 2020 by MC volume calculation routine by
+% sampling 1000000 random points in the geometry.
+
+set mvol
+
+Flibe924        0 1.28673E+01 % (0.001)
+CG1074          0 8.19434E+00 % (0.001)
+Shell1074       0 2.64044E+00 % (0.003)
+Buffer1074      0 3.77973E-01 % (0.008)
+iPyC1074        0 2.12355E-01 % (0.011)
+SiC1074         0 2.56770E-01 % (0.011)
+oPyC1074        0 3.10770E-01 % (0.008)
+Matrix1074      0 1.97878E+00 % (0.004)
+fuel_1          0 1.61298E-01 % (0.013)

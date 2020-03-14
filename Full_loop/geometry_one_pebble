@@ -1,0 +1,19 @@
+
+    %%---plotting geometry
+    plot 1 3000 3000    
+    
+    %%---surf for core
+    surf infinite inf
+
+    %%---surf for triso inside fuel pebbles (spheres)
+    surf central_graphite sph 0 0 0 1.25114 % internal graphite
+    surf graphite_mat sph 0 0 0 1.4 % graphite matrix maximum radius
+
+    surf core_surf cuboid -1.5 1.5 -1.5 1.5 -1.5 1.5
+
+    cell out_cell 0 outside core_surf
+    
+    pbed u_pb u_flibe "fpb_one_pebble" 
+    cell c_pb 0 fill u_pb  -core_surf %-upper_plane lower_plane
+    cell c_flibe u_flibe Flibe924 -infinite
+    

@@ -1,0 +1,27 @@
+
+%%% Fuel 1
+
+%---Material
+mat fuel_1 -10.5 
+92235.09c -1.8550745183787565
+92238.09c -7.466907986037106
+ 6000.09c -0.23578332004413427
+ 8016.09c -0.9422341755400028
+    
+    %---Triso particle 
+    particle p1
+    fuel_1 0.02
+    Buffer1074 0.03
+    iPyC1074 0.0335
+    SiC1074 0.037
+    oPyC1074 0.0405
+    Matrix1074
+    
+    %---Triso  lattice
+    lat l1 6 0. 0. 0.08860629 p1
+        
+    %---Fill pebble with lattice
+    cell c1_1 1 CG1074 -central_graphite
+    cell c1_2 1 fill l1 central_graphite -graphite_mat
+    cell c1_3 1 Shell1074 graphite_mat
+    

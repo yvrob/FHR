@@ -1,0 +1,5 @@
+
+    include coreMaterials
+    include fuel_one_pebble
+    include geometry_one_pebble
+    set pop 100 100 100
