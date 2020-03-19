@@ -911,7 +911,7 @@ if __name__=='__main__':
     plot=True # Boolean to plot or not the geometry
     qual = 2000 # Quality of the plots (px)
     
-    acelib = '' #'/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to cross sections library
+    acelib = '/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata' # Path to cross sections library
     opti=4 # Optimization to adjust CPU/RAM. 1: less RAM, more time, 4: more RAM, less time 
     ures = 1 # Unresolved resonance probability table sampling
     n_particles=10000 #10000 # Number of particles per cycle
@@ -927,7 +927,7 @@ if __name__=='__main__':
     
     # SERPENT2
     serpent_exe='/global/home/users/yvesrobert/Softwares/serpent2.1.31_gcc/sss2'
-    serpent_exe='/home/yvrob/SSS/2-1-31/sss2'
+    #serpent_exe='/home/yvrob/SSS/2-1-31/sss2'
     path_serpent='./' # Path to the Serpent case
     input_serpent='input' # Serpent input file name
     flux_det='spectrum' # Name of the flux spectrum detector 

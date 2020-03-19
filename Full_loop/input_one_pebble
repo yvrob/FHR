@@ -2,4 +2,5 @@
     include coreMaterials
     include fuel_one_pebble
     include geometry_one_pebble
-    set pop 100 100 100
+    set acelib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata"
+set pop 100 100 100
